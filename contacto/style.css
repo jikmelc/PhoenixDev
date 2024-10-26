@@ -1,0 +1,92 @@
+.navbar {
+  background-color: #b68c6e !important;
+}
+
+.navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+}
+
+body {
+
+  background-color: #f7eed9 !important;
+  overflow-y: scroll;
+  height: 100%;
+
+}
+
+
+
+h2 {
+  font-family: "bespoke-sans-bold";
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+h3 {
+  font-family: "bespoke-sans-bold";
+  font-size: 2rem;
+  text-align:center;
+  font-weight: bold;
+  color: black;
+}
+
+main{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  
+}
+
+.form1 {
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 16px;
+  flex-direction: column;
+  gap: 25px;
+  width: 500px;
+}
+
+.form-floating {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#texto {
+  width: 300px;
+  height: 200px;
+}
+
+footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 200px;
+}
+
