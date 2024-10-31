@@ -14,25 +14,6 @@ body {
     overflow-y: scroll;
     height: 100%;
 }
-  
-  /* Estilos para el logo */
-.logo-img {
-    height: 50px;
-    width: 50px;
-}
-  
-/* Estilos para la barra de navegación */
-.navbar {
-    background-color: #b68c6e !important;
-}
-  
-.navbar-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
 
 /* Títulos y párrafos */
 h2 {
@@ -65,14 +46,6 @@ h2 {
     .navbar-nav {
       margin-left: auto;
       margin-right: auto;
-    }
-  
-    .navbar-brand {
-      margin-right: auto;
-    }
-  
-    .navbar-collapse {
-      text-align: center;
     }
   
     .d-flex {

@@ -1,57 +1,23 @@
 /* Definición de fuentes */
-@font-face {
+@font-face 
+{
   font-family: bespoke-sans-bold;
-  src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf');
 }
-
-@font-face {
+@font-face 
+{
   font-family: bespoke-sans;
-  src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf');
 }
-
-body {
+body 
+{
   background-color: #f7eed9 !important;
-  overflow-y: scroll;
+ 
   height: 100%;
 }
 
-/* Estilos para el logo */
-.logo-img {
-  height: 50px;
-  width: 50px;
-}
-
-/* Estilos para la barra de navegación */
-.navbar {
-  background-color: #b68c6e !important;
-}
-.navbar-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-}
-
-.logo-img {
-  width: 70px;
-  height: 70px;
-}
-
-.navbar-collapse {
-  text-align: center;
-}
-
-.btn-lg {
- border-color: #000;
- background-color: #000 !important;
- font-size: 2rem;
- color: #f7eed9;
-}
-
-
-/* Sección de "About Us" */
-.about-us {
+.about-us 
+{
   background-color: #f7eed9;
   padding-bottom: 10px; /* Ajuste para mayor espaciado */
   display: grid;
@@ -75,12 +41,13 @@ h2 {
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
+  margin-top: 20px;
   
 }
 
 .card img{
   width: 200px; /* Tamaño de imagen fijo */
-  height: 200px;
+  height: auto;
   margin: 10px;
 }
 
@@ -90,10 +57,11 @@ h5 {
   font-weight: bold;
 }
 
-p {
+p 
+{
   font-family: "Inter";
   font-size: 1.5rem;
-  text-align: justify;
+ 
 }
 
 span{
@@ -105,24 +73,19 @@ span{
 .subtitle {
   margin-top: 25px;
 }
-
 /* Estilos para las cartas */
-.card {
+.card 
+{
   margin-top: 25px;
 }
-
-ul {
-  list-style: none !important;
-}
-
-/* Cartas de miembros del equipo */
-.card-member {
+.card-member 
+{
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
-
-.card-member img {
+.card-member img 
+{
   width: 150px; /* Tamaño de imagen fijo */
   height: auto;
   margin-right: 15px;
@@ -145,7 +108,11 @@ ul {
   margin-left: 10%;
   margin-right: 10%;
 }
-
+.imagenizquierda
+{
+  display: flex;
+  justify-content: flex-end;
+}
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
@@ -158,37 +125,28 @@ ul {
 }
 
 /* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar-nav {
+@media (max-width: 768px) 
+{
+  .navbar-nav 
+  {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .navbar-brand {
-    margin-right: auto;
-  }
-
-  .d-flex {
+  .d-flex 
+  {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  .card-member {
+  .card-member 
+  {
     flex-direction: column;
     text-align: center;
   }
 
-  .card-member img {
+  .card-member img 
+  {
     margin-bottom: 10px;
     margin-right: 0;
   }
-
-  h1 {
-    font-family: "bespoke-sans-bold";
-    font-size: 1.8rem;
-    margin-right: 50px;
-    color: black;
-    
-  }
-
 }
