@@ -1,0 +1,55 @@
+/* Definición de fuentes */
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+  
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+}
+  
+body {
+    background-color: #f7eed9 !important;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+/* Títulos y párrafos */
+h2 {
+    font-family: "bespoke-sans-bold";
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  
+  h3 {
+    font-family: "bespoke-sans";
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-family: "Inter";
+  }
+  
+  .subtitle {
+    margin-top: 25px;
+  }
+.btn{
+    background-color: #d5a86d !important;
+    border-color: #b68c6e !important;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .d-flex {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+}
