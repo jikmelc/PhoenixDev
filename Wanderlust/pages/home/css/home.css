@@ -1,0 +1,49 @@
+/* Definición de fuentes */
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+  
+@font-face {
+    font-family: bespoke-sans;
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+}
+  
+body ,html
+{
+    background-color: #f7eed9 ;
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-inline:hidden;
+      min-width: 50vw; /* Ancho máximo: 100% del ancho de la ventana */
+    min-height: 20vh;
+}
+
+main{
+    transition: background-image 2s linear; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100vw; /* Ancho máximo: 100% del ancho de la ventana */
+    height: 90vh;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.555); /* Fondo semi-transparente */
+    height: 90vh;
+}
+.card-body
+{
+    padding: 50px;
+}
+.card-footer
+{
+    margin-top: auto;
+}
+.button-container{
+    margin-top: auto;
+    padding: 8%;
+}
+.card-title{padding: 20px;}
+.card-text{padding: 20px;}
