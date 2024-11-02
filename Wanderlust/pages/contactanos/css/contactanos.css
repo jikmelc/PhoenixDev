@@ -1,18 +1,23 @@
 /* Definición de fuentes */
 @font-face {
     font-family: bespoke-sans-bold;
-    src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
 }
-  
+
 @font-face {
     font-family: bespoke-sans;
-    src: url(../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
-  
+
 body {
     background-color: #f7eed9 !important;
-    overflow-y: scroll;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+  flex: 1;
 }
 
 /* Títulos y párrafos */
@@ -23,16 +28,16 @@ h2 {
     font-weight: bold;
     color: black;
   }
-  
+
   h3 {
     font-family: "bespoke-sans";
     font-size: 1.5rem;
   }
-  
+
   p {
     font-family: "Inter";
   }
-  
+
   .subtitle {
     margin-top: 25px;
   }
@@ -47,7 +52,7 @@ h2 {
       margin-left: auto;
       margin-right: auto;
     }
-  
+
     .d-flex {
       width: 100%;
       margin-bottom: 10px;

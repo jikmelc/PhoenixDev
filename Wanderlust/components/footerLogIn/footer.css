@@ -1,0 +1,22 @@
+#footerLogIn {
+    background-color: #b68c6e;
+    gap: 20px;
+    bottom: 0;
+    padding: 0.5rem;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+}
+
+a.nav-link{
+    color: black;
+}
+
+a.nav-link:hover{
+    /* background-color: #d5a86d; */
+    text-decoration: underline;
+    border-radius: 10px;
+    color: black;
+}
