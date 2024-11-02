@@ -12,6 +12,8 @@
     <script defer src="js/contactanos.js"></script>
     <link rel="stylesheet" href="css/contactanos.css">
     <link rel="stylesheet" href="../../components/navbar/navbar.css">
+    <link rel="stylesheet" href="../../components/footerLogIn/footer.css">
+
 </head>
 <body class="vh-100" data-spy="scroll">
     <header>
@@ -25,7 +27,7 @@
         </script>
     </header>
     
-    <main class='container mt-4'>
+    <main class='main-content container mt-4'>
         <h1 class="text-center">Contáctanos</h1>
         <form novalidate>
             <!-- Nombre del usuario que quiere contactarnos -->
@@ -60,5 +62,15 @@
             </div> 
         </form>
     </main>
+    <footer>
+        <div id="footer-container"></div> 
+        <script>
+          fetch("../../components/footerLogIn/footer.html")
+            .then(response => response.text())
+            .then(html => {
+              document.getElementById('footer-container').innerHTML = html;
+            });
+        </script>
+      </footer>
 </body>
 </html>
