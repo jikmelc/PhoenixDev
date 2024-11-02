@@ -46,27 +46,76 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <label for="fechaDeNacimiento" class="form-label"></label>
-                <select class="form-select" name="dia" id="fechaDeNacimiento">
-                    <option selected>Día</option>
+
+            <div class="col-md-9"> 
+                <label class="form-label">Fecha de nacimiento</label>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- <label for="diaDeNacimiento" class="form-label">Día</label> -->
+                        <select class="form-select" name="dia" id="diaDeNacimiento">
+                            <option selected>Día</option>
+                            <!-- Opciones para los días -->
+                        </select>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <!-- <label for="mesDeNacimiento" class="form-label">Mes</label> -->
+                        <select class="form-select" name="mes" id="mesDeNacimiento">
+                            <option selected>Mes</option>
+                            <!-- Opciones para los meses -->
+                        </select>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <!-- <label for="añoDeNacimiento" class="form-label">Año</label> -->
+                        <select class="form-select" name="año" id="añoDeNacimiento">
+                            <option selected>Año</option>
+                            <!-- Opciones para los años -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label" for="sexoUsuario">Sexo</label>
+                <select class="form-select" name="sexo" id="sexoUsuario">
+                    <option selected>Femenino</option>
+                    <option>Masculino</option>
                 </select>
             </div>
 
-            <div class="col-md-4">
-                <label for="mesDeNacimiento" class="form-label"></label>
-                <select class="form-select" name="mes" id="mesDeNacimiento">
-                    <option selected>Mes</option>
-                </select>
+            <div class="col-md-6">
+                <div class="form-floating mb-3" id="emailField">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" name="userEmail" required>
+                    <label for="inputEmail" class="form-label">Correo electrónico</label>
+                    <small id="inputEmailHelp" class="form-text text-muted">Ejemplo: usuario@dominio.com</small>
+                </div>
+            </div>
+            <!-- Número telefónico del usuario que desea contactarnos -->
+            <div class="col-md-6">
+                <div class="form-floating mb-3" id="phoneField">
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Ejemplo: +52 " name="userPhone" required>
+                    <label for="inputPhone" class="form-label">Número de teléfono</label>
+                    <small id="inputPhoneHelp" class="form-text text-muted">Ejemplo: +52 551909890</small>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <label for="añoDeNacimiento" class="form-label"></label>
-                <select class="form-select" name="año" id="añoDeNacimiento">
-                    <option selected>Año</option>
-                </select>
+            <div class="col-md-6">
+                <label for="contrsaeñaUsuario" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contraseñaUsuario" name="contraseña">
+                <small id="contraseñaAyuda" class="form-text text-muted">La contraseña debe...</small>
             </div>
 
+            <div class="col-md-6">
+                <label for="confirmarContraseñaUsuario" class="form-label">Confirma tu contraseña</label>
+                <input type="password" class="form-control" id="confirmarContraseñaUsuario" name="confirmacionContraseña">
+                <small id="confirmacionAyuda" class="form-text text-muted">Debe coincidir con la contraseña</small>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <a href="#" class="btn btn-secondary">¿Ya tienes una cuenta?</a>
+            </div> 
 
         </form>
 
