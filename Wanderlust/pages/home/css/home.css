@@ -47,3 +47,14 @@ main{
 }
 .card-title{padding: 20px;}
 .card-text{padding: 20px;}
+.btn
+{
+    background-color: #b68c6e;
+    border:1px solid black ;
+} 
+.button-container a:hover
+{
+  
+  background-color:burlywood;
+  color:#b68c6e ;
+}
