@@ -1,0 +1,61 @@
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+}
+
+body {
+    background-color: #f7eed9 !important;
+    justify-content: center;
+}
+
+main {
+    background-color: #f7eed9 !important;
+    overflow-y: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_color {
+    background-color: #58461d !important;
+}
+
+.logo_imagen {
+    width: 600px;
+    height: 600px;
+}
+
+
+.form1 {
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 16px;
+    flex-direction: column;
+    gap: 25px;
+    width: 500px;
+}
+
+.form-floating {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 200px;
+}
