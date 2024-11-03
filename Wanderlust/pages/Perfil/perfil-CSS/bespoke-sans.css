@@ -32,7 +32,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-LightItalic';
-  src: url('../fonts/BespokeSans-LightItalic.woff2') format('woff2'),
+  src: url('assets/fonts/BespokeSans-LightItalic.woff2') format('woff2'),
        url('../fonts/BespokeSans-LightItalic.woff') format('woff'),
        url('../fonts/BespokeSans-LightItalic.ttf') format('truetype');
   font-weight: 300;
