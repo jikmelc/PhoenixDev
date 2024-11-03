@@ -1,0 +1,209 @@
+body {
+  background-color: #f7eed9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 8px;
+}
+
+/* Imagen de perfil */
+.profile-image {
+  width: auto;
+  height: 60px;
+  border-radius: 25px;
+}
+
+/* Configuración y barra de búsqueda */
+.settings-tray {
+  background: #eee;
+  padding: 10px 15px;
+}
+
+.settings-tray .nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.settings-tray .nav-item {
+  list-style: none;
+}
+
+.settings-tray .nav-link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.settings-tray .dropdown-toggle::after {
+  display: none;
+}
+
+.settings-tray i {
+  margin-top: 0;
+  font-size: 25px;
+  color: grey;
+  transition: .3s;
+}
+
+.settings-tray .bi-chat-fill {
+  margin-right: 14px;
+}
+
+.settings-tray i:hover {
+  color: #74b9ff;
+  cursor: pointer;
+}
+
+.search-bar {
+  background-color: #eee;
+}
+
+.form-control {
+  margin-left: 8px;
+}
+
+/* Estilos para la lista de amigos */
+.friend-list {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: #fff;
+  transition: .3s ease;
+}
+
+.friend-drawer--grey {
+  background: #eee;
+}
+
+.friend-drawer .text {
+  margin-left: 12px;
+  width: 70%;
+}
+
+.friend-drawer .text h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.friend-drawer .text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.friend-drawer .time {
+  color: grey;
+}
+
+.friend-drawer--onhover:hover {
+  background: #74b9ff;
+  cursor: pointer;
+}
+
+.friend-drawer--onhover:hover p,
+.friend-drawer--onhover:hover h6,
+.friend-drawer--onhover:hover .time {
+  color: #fff !important;
+}
+
+hr {
+  margin: 5px auto;
+  width: 60%;
+}
+
+/* Panel de chat */
+.col-md-8 {
+  padding: 0;
+}
+
+.chat-panel {
+  overflow-y: auto;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  background: #eee;
+  margin: 10px 30px;
+  border-radius: 9px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 0;
+  margin-top: -10px;
+}
+
+.chat-bubble--left::after {
+  left: 0;
+  border-right-color: #eee;
+  border-left: 0;
+  margin-left: -20px;
+}
+
+.chat-bubble--right::after {
+  right: 0;
+  border-left-color: #74b9ff;
+  border-right: 0;
+  margin-right: -20px;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Ajuste para mensajes del usuario */
+.offset-md-9 .chat-bubble {
+  background: #74b9ff;
+  color: #fff;
+}
+
+/* Caja de entrada del chat */
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.chat-box-tray input {
+  flex-grow: 1;
+  margin: 0 10px;
+  padding: 6px;
+}
+
+.chat-box-tray i {
+  color: grey;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.chat-box-tray i:last-of-type {
+  margin-left: 25px;
+}
+  
