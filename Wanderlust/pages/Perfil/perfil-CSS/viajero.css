@@ -1,0 +1,76 @@
+@import url('/perfil-CSS/bespoke-sans.css');
+@import url('/perfil-CSS/amigo.css');
+@import url('/perfil-CSS/movil.css');
+
+/*color claro #f7eed9
+/*color crema #c2b1a5
+/*color intermedio #b68c6e
+/*color tipo dorado #d5a86d
+/*color oscuro #4a4a4a
+
+
+/* Estilos de la caja de publicación*/
+#container-next{
+    padding-bottom: 15px;
+}
+
+.box-publi{ 
+    width: 100%; 
+    max-width: 710px; 
+    margin: auto; 
+    padding: 20px; 
+    
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #f9f9f9; 
+} 
+
+.box-publi h2{ 
+    font-family: 'BespokeSans-MediumItalic';
+    font-size: 15px;
+    text-align: left;
+    color: black;;
+    text-align: left; 
+    margin-bottom: 10px; 
+} 
+
+.box-publi form{ 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+.box-publi textarea{ 
+    width: 100%; 
+    height: 100px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    resize: none; 
+} 
+
+.button-publi{
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #d5a86d;
+    border-radius: 30px;
+    color: #333;
+    padding: 5px 20px;
+    text-align: center;
+    display: flex;
+    margin: 3px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button-publi:hover {
+    background-color:#c2b1a5;
+    color: white;
+    font-family: "Inter";
+    font-weight: bold;
+}
+
+
