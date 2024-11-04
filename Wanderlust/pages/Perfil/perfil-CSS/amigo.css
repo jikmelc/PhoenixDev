@@ -174,7 +174,7 @@ section{
 
 #photobg{
     
-    background-image: url(/Wanderlust/pages/Perfil/assets/TrenBankok.jpg);
+    background-image: url(/Wanderlust/assets/perfil/TrenBankok.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -187,7 +187,7 @@ section{
 
 #photobg-dos{
     
-    background-image: url(/Wanderlust/pages/Perfil/assets/Cascada.jpg);
+    background-image: url(/Wanderlust/assets/perfil/Cascada.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -200,7 +200,7 @@ section{
 
 #photobg-tres{
     
-    background-image: url(/Wanderlust/pages/Perfil/assets/Vietnam.jpg);
+    background-image: url(/Wanderlust/assets/perfil/Vietnam.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -215,7 +215,7 @@ section{
 
 #photobg-cua{
     
-    background-image: url(/Wanderlust/pages/Perfil/assets/Tokio.jpg);
+    background-image: url(/Wanderlust/assets/perfil/Tokio.jpg);
     padding: 15px;
     border-radius: 20px;
     

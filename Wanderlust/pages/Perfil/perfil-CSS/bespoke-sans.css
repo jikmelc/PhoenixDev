@@ -32,7 +32,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-LightItalic';
-  src: url('/Wanderlust/pages/Perfil/assets/fonts/Bespoke-sans/BespokeSans-LightItalic.woff2') format('woff2'),
+  src: url('/Wanderlust/assets/perfil/fonts/Bespoke-sans/BespokeSans-LightItalic.woff2') format('woff2'),
        url('../fonts/BespokeSans-LightItalic.woff') format('woff'),
        url('../fonts/BespokeSans-LightItalic.ttf') format('truetype');
   font-weight: 300;
@@ -68,7 +68,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-MediumItalic';
-  src: url('/Wanderlust/pages/Perfil/assets/fonts/Bespoke-sans/BespokeSans-MediumItalic.woff2') format('woff2'),
+  src: url('/Wanderlust/assets/perfil/fonts/Bespoke-sans/BespokeSans-MediumItalic.woff2') format('woff2'),
        url('../fonts/BespokeSans-MediumItalic.woff') format('woff'),
        url('../fonts/BespokeSans-MediumItalic.ttf') format('truetype');
   font-weight: 500;
@@ -86,7 +86,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-BoldItalic';
-  src: url('/Wanderlust/pages/Perfil/assets/fonts/Bespoke-sans/BespokeSans-BoldItalic.woff2') format('woff2'),
+  src: url('/Wanderlust/assets/perfil/fonts/Bespoke-sans/BespokeSans-BoldItalic.woff2') format('woff2'),
        url('../fonts/BespokeSans-BoldItalic.woff') format('woff'),
        url('../fonts/BespokeSans-BoldItalic.ttf') format('truetype');
   font-weight: 700;
@@ -104,7 +104,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-ExtraboldItalic';
-  src: url('/Wanderlust/pages/Perfil/assets/fonts/Bespoke-sans/BespokeSans-ExtraboldItalic.woff2') format('woff2'),
+  src: url('/Wanderlust/assets/perfil/fonts/Bespoke-sans/BespokeSans-ExtraboldItalic.woff2') format('woff2'),
        url('../fonts/BespokeSans-ExtraboldItalic.woff') format('woff'),
        url('../fonts/BespokeSans-ExtraboldItalic.ttf') format('truetype');
   font-weight: 800;
