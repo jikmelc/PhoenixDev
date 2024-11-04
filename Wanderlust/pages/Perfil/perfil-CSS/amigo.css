@@ -1,5 +1,5 @@
-@import url('/perfil-CSS/bespoke-sans.css');
-@import url('/perfil-CSS/movil.css');
+@import url('/Wanderlust/pages/Perfil/perfil-CSS/bespoke-sans.css');
+@import url('/Wanderlust/pages/Perfil/perfil-CSS/movil.css');
 
 /*color claro #f7eed9
 /*color crema #c2b1a5
@@ -61,7 +61,7 @@ main{
 }
 
 h3{
-    font-family: 'BespokeSans-MediumItalic';
+    font-family: 'BespokeSans-MediumItalic' !important;
     font-size: 5rem;
     text-align: left;
     color: black;
@@ -70,7 +70,7 @@ h3{
 /*Aquí empieza los estilos de la card sticky del viajero*/
 
 #photo-user{
-    width: 220px;
+    width: 230px;
     height: 375px;
 }
 
@@ -173,7 +173,7 @@ section{
 
 #photobg{
     
-    background-image: url(/assets/TrenBankok.jpg);
+    background-image: url(/Wanderlust/pages/Perfil/assets/TrenBankok.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -186,7 +186,7 @@ section{
 
 #photobg-dos{
     
-    background-image: url(/assets/Cascada.jpg);
+    background-image: url(/Wanderlust/pages/Perfil/assets/Cascada.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -199,7 +199,7 @@ section{
 
 #photobg-tres{
     
-    background-image: url(/assets/Vietnam.jpg);
+    background-image: url(/Wanderlust/pages/Perfil/assets/Vietnam.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -214,7 +214,7 @@ section{
 
 #photobg-cua{
     
-    background-image: url(/assets/Tokio.jpg);
+    background-image: url(/Wanderlust/pages/Perfil/assets/Tokio.jpg);
     padding: 15px;
     border-radius: 20px;
     
