@@ -1,5 +1,5 @@
-@import url('/Wanderlust/pages/Perfil/perfil-CSS/bespoke-sans.css');
-@import url('/Wanderlust/components/footerLogIn/footer.css');
+@import url('../perfil-CSS/bespoke-sans.css');
+@import url('../../../components/footerLogIn/footer.css');
 @import url('/Wanderlust/pages/Perfil/perfil-CSS/movil.css');
 
 /*color claro #f7eed9
