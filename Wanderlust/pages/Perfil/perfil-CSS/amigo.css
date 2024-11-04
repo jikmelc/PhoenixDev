@@ -1,6 +1,6 @@
-@import url('/Wanderlust/pages/Perfil/perfil-CSS/bespoke-sans.css');
-@import url('/Wanderlust/components/footerLogIn/footer.css');
-@import url('/Wanderlust/pages/Perfil/perfil-CSS/movil.css');
+@import url('../perfil-CSS/bespoke-sans.css');
+@import url('../../../components/footerLogIn/footer.css');
+@import url('../perfil-CSS/movil.css');
 
 /*color claro #f7eed9
 /*color crema #c2b1a5
@@ -174,7 +174,7 @@ section{
 
 #photobg{
     
-    background-image: url(/Wanderlust/assets/perfil/TrenBankok.jpg);
+    background-image: url(../../../assets/perfil/TrenBankok.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -187,7 +187,7 @@ section{
 
 #photobg-dos{
     
-    background-image: url(/Wanderlust/assets/perfil/Cascada.jpg);
+    background-image: url(../../../assets/perfil/Cascada.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -200,7 +200,7 @@ section{
 
 #photobg-tres{
     
-    background-image: url(/Wanderlust/assets/perfil/Vietnam.jpg);
+    background-image: url(../../../assets/perfil/Tokio.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -215,7 +215,7 @@ section{
 
 #photobg-cua{
     
-    background-image: url(/Wanderlust/assets/perfil/Tokio.jpg);
+    background-image: url(../../../assets/perfil/Vietnam.jpg);
     padding: 15px;
     border-radius: 20px;
     
