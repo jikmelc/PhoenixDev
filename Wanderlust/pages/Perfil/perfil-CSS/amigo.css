@@ -71,17 +71,20 @@ h3{
 /*Aquí empieza los estilos de la card sticky del viajero*/
 
 #photo-user{
-    width: 230px;
-    height: 375px;
-}
-
-.card-img-top{
-    max-width: 120px;
-    max-height: min-content;
-    border-radius: 5px;
+    width: 130px;
+    height: 200px;
+    border-radius: 10px;
     align-self: center;
     padding-top: 20px;
 }
+
+/*.card-img-top{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    align-self: center;
+    padding-top: 20px;
+}*/
 .card-title-profile{
     font-family: 'BespokeSans-ExtraboldItalic';
     font-size: 20px;
@@ -200,7 +203,7 @@ section{
 
 #photobg-tres{
     
-    background-image: url(../../../assets/perfil/Tokio.jpg);
+    background-image: url(../../../assets/perfil/Vietnam.jpg);
     padding: 15px;
     border-radius: 20px;
     
@@ -215,7 +218,7 @@ section{
 
 #photobg-cua{
     
-    background-image: url(../../../assets/perfil/Vietnam.jpg);
+    background-image: url(../../../assets/perfil/Tokio.jpg);
     padding: 15px;
     border-radius: 20px;
     
