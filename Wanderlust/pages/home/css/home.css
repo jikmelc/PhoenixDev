@@ -44,11 +44,13 @@ main{
 .button-container{
     margin-top: auto;
     padding: 8%;
+   
 }
 .card-title{padding: 20px;}
 .card-text{padding: 20px;}
 .btn
 {
+    width: 200px;
     background-color: #b68c6e;
     border:1px solid black ;
 } 
