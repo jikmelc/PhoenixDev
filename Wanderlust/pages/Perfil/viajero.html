@@ -14,25 +14,16 @@
 </head>
 <body>
     
-    <header>
-    <nav class="navbar" >
-      <div>
-        <a href="../home/home.html"><img id="wander-logo" src="/assets/perfil/logo-wanderlust-sinfondo.png" alt="Logo-Wander"></a>
-      </div>
-      <div>
-        <input type="text" placeholder="¿A dónde vamos?" >
-      </div>
-      <div>
-        <a href="../feed/feed.html"><img id="home-logo" src="../../assets/perfil/HomeLogo.png" alt="home"></a>
-      </div>
-      <div>
-        <a href="../chat/chat.html"><img id="groups-logo" src="../../assets/perfil/MessageLogo.png" alt="message"></a>
-      </div>
-      <div>
-        <a href="../Perfil/viajero.html"><img id="perfil-logo" src="../../assets/perfil/PerfilLogo.png" alt="perfil"></a>
-      </div>
-    </nav>
-  </header>
+  <header>
+    <div id="navbar-container"></div> 
+    <script>
+        fetch("../../components/navbarSesionIniciada/navbarSesionIniciada.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML =html;
+        });
+    </script>
+</header>
     
     <main>
          
