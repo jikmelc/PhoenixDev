@@ -18,7 +18,7 @@
 
     <div id="navbar-container">
         <script>
-            fetch("/Wanderlust/components/navbarSesionIniciada/navbarSesionIniciada.html")
+            fetch("../../components/navbarSesionIniciada/navbarSesionIniciada.html")
             .then(response => response.text())
             .then(html => {
                 document.getElementById('navbar-container').innerHTML = html;
