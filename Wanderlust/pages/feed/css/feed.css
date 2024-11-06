@@ -1,0 +1,20 @@
+@import url("../../../components/footerLogIn/footer.css");
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+  
+@font-face {
+    font-family: bespoke-sans;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+}
+
+body ,html
+{   
+    background-color: #f7eed9 ;
+    margin: 0;
+    padding: 0;
+   
+    
+     
+}
