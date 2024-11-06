@@ -1,0 +1,36 @@
+/* Estilos navbar */
+#wander-logo{
+  height: 50px;
+  width: 80px;
+  padding-left: 35px;
+}
+
+#homelogo{
+  height: 50px;
+  width: 55px;
+  padding-left: 25px;
+}
+
+#groups-logo{
+  height: 50px;
+  width: 55px;
+}
+
+#perfil-logo{
+  height: 50px;
+  width: 75px;
+  padding-right: 25px;
+}
+
+.navbar {
+  background-color: #b68c6e !important;
+}
+
+input{
+  border-radius: 25px;
+  border-color: #4a4a4a;
+  width: 520px;
+  text-align: center;
+  font-family: 'BespokeSans-LightItalic';
+  font-size:small;
+}
