@@ -7,22 +7,30 @@ background-image: radial-gradient(at 48.9415657957144% 42.54975011993949%, hsla(
 .navbar-logo img
 {
     height: 80px;
-    
+    padding-left: 3vh;
 }
 .navbar-links
 {   
     display: flex;
     justify-content: center;
 }
-.btn-container button
-{
-    border-color: #2e2525;
-    background-color: #2e2525 !important;
-    font-size: 1.5rem;
-    color: #f7eed9;
-}
 
+.navbar
+{
+    min-height: 10vh;
+}
+.btn
+{
+    background-color: #b68c6e;
+    border:1px solid black ;
+} 
 .btn-container button:hover
 {
-  color:#b3b1aa;
+  background-color:burlywood;
+  color:#b68c6e ;
+}
+
+.btn-container {
+    padding-right: 3vh;
+    
 }
