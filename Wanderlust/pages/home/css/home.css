@@ -1,4 +1,4 @@
-/* Definición de fuentes */
+@import url("../../../components/footerLogIn/footer.css");
 @font-face {
     font-family: bespoke-sans-bold;
     src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
@@ -8,13 +8,13 @@
     font-family: bespoke-sans;
     src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
-  
+
 body ,html
 {   
     background-color: #f7eed9 ;
     margin: 0;
     padding: 0;
-    height: 90vh;
+    height: 82.2vh;
     min-height: fit-content;
     min-width:fit-content; 
 }
@@ -31,8 +31,7 @@ main{
 .card {
    
     background-color: rgba(255, 255, 255, 0.555); /* Fondo semi-transparente */
-    min-height: 90vh;
-    
+    min-height: 82.2vh;
 }
 .card-body
 {
