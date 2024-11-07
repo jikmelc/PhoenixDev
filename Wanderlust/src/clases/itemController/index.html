@@ -12,38 +12,6 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Task List</title>
-</head>
-
-<body>
-    <div class="container">
-        <h1 class="my-5 ">New Item</h1>
-        <div class="row">
-            <div class="col">
-                <h2>New Item</h2>
-                <form id="newItemForm">
-                    <div class="form-group">
-                        <label for="newItemNameInput">Name</label>
-                        <input type="text" class="form-control" id="newItemTitle">
-                    </div>
-                    <div class="form-group">
-                        <label for="newItemDescription">Description</label>
-                        <textarea type="text" class="form-control" id="newItemText"></textarea>
-                    </div>
-                 
-                    <button type="submit" class="btn btn-primary btn-block">Add Item</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div>
-
-    
-
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -54,8 +22,54 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script src="/src/clases/itemController/itemController.js"></script>
-    <script src="/src/clases/itemController/index.js"></script>
+        <script src="/Wanderlust/src/clases/itemController/itemController.js"></script> 
+        <script defer src="/Wanderlust/src/clases/itemController/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-5 ">New Item</h1>
+        <div class="row">
+            <div class="col">
+                <h2>New Item</h2>
+                <form id="newItemForm">
+
+                    <div class="form-group">
+                        <label for="newItemNameInput">Titulo</label>
+                        <input type="text" class="form-control" id="newItemTitle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newItemDescription">Place</label>
+                        <textarea type="text" class="form-control" id="newItemPlace"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newItemNameInput">Text</label>
+                        <input type="text" class="form-control" id="newItemText">
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="newItemNameInput">Image</label>
+                        <input type="text" class="form-control" id="newItemImagesUrl">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Add Item</button>
+                </form>
+            </div>
+        </div>
+        <div id="list-items"></div>
+    </div>
+
+    <button  class="btn btn-primary " id="show">Show Items</button>
+
+    <div>
+
+    
+
+    </div>
+
+    
 </body>
 
 </html>
