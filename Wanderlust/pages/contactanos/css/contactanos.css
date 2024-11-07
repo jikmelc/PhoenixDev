@@ -43,6 +43,7 @@ p {
 .btn{
     background-color: #d5a86d !important;
     border-color: #b68c6e !important;
+    width: 200px;
 }
 
 /* Ajustes para pantallas pequeñas */
