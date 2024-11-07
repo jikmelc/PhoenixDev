@@ -1,0 +1,17 @@
+#register {
+    background-color: black;
+    color: white;
+    width: 200px;
+}
+
+#cuenta {
+    background-color: black;
+    color: white;
+    width: 200px;
+}
+
+#division_boton {
+   gap: 100px;
+   display: flex;
+   justify-content: space-between;
+}

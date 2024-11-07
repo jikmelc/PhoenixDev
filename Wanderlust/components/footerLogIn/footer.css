@@ -1,22 +1,43 @@
-#footerLogIn {
-    background-color: #b68c6e;
-    gap: 20px;
-    bottom: 0;
-    padding: 0.5rem;
-}
-
 footer{
     position: relative;
     width: 100%;
 }
 
-a.nav-link{
-    color: black;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b68c6e;
+    padding: 10px;
+    gap: 15px;
+}
+
+.nav-container {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 a.nav-link:hover{
-    /* background-color: #d5a86d; */
     text-decoration: underline;
-    border-radius: 10px;
-    color: black;
+} 
+
+.copyright-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copyright-container img {
+    height: 12px;
+    vertical-align: middle;
+}
+
+.copyright-container p {
+    margin: 0;
+    line-height: 12px;
+    font-size: 1rem;
 }

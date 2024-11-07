@@ -1,3 +1,5 @@
+@import url('../../../components/footerLogIn/footer.css');
+
 /* Definición de fuentes */
 @font-face {
     font-family: bespoke-sans-bold;
@@ -29,21 +31,19 @@ h2 {
     color: black;
   }
 
-  h3 {
+h3 {
     font-family: "bespoke-sans";
     font-size: 1.5rem;
   }
 
-  p {
+p {
     font-family: "Inter";
   }
 
-  .subtitle {
-    margin-top: 25px;
-  }
 .btn{
     background-color: #d5a86d !important;
     border-color: #b68c6e !important;
+    width: 200px;
 }
 
 /* Ajustes para pantallas pequeñas */

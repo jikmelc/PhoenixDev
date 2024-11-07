@@ -1,4 +1,20 @@
 /* Estilos navbar */
+@import url('../../pages/Perfil/perfil-CSS/bespoke-sans.css');
+
+
+.navbar {
+  background-color: #b68c6e !important;
+}
+
+input{
+  border-radius: 25px;
+  border-color: #4a4a4a;
+  width: 520px;
+  text-align: center;
+  font-family: 'BespokeSans-LightItalic';
+  font-size:small;
+}
+
 #wander-logo{
   height: 50px;
   width: 80px;
@@ -22,15 +38,3 @@
   padding-right: 25px;
 }
 
-.navbar {
-  background-color: #b68c6e !important;
-}
-
-input{
-  border-radius: 25px;
-  border-color: #4a4a4a;
-  width: 520px;
-  text-align: center;
-  font-family: 'BespokeSans-LightItalic';
-  font-size:small;
-}

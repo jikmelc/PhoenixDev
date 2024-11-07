@@ -2,6 +2,7 @@
 @import url('../../../components/footerLogIn/footer.css');
 @import url('../perfil-CSS/movil.css');
 
+
 /*color claro #f7eed9
 /*color crema #c2b1a5
 /*color intermedio #b68c6e
@@ -231,7 +232,9 @@ section{
 
 /*Aquí empieza el footer*/
 
-footer{
+
+
+/* footer{
     background-color: #d5a86d;
     height: 70px;
 }
@@ -261,6 +264,6 @@ footer{
     width: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
-}
+} */
 
 /*Aquí empiezan los estilos para la versión móvil o tablet*/

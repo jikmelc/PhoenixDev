@@ -1,9 +1,9 @@
 
 const imagenesFondo = [
-"/pages/home/assets/fondo1.jpg",
-"/pages/home/assets/fondo2.jpg",
-"/pages/home/assets/fondo3.jpg",
-"/pages/home/assets/fondo4.jpg"
+"../../pages/home/assets/fondo1.jpg",
+"../../pages/home/assets/fondo2.jpg",
+"../../pages/home/assets/fondo3.jpg",
+"../../pages/home/assets/fondo4.jpg"
 ];
 let indiceImagen = 0;
 
