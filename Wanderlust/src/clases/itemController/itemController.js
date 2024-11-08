@@ -33,6 +33,7 @@ class ItemsController {
       }
     }
 
+
     updateItem(id, newData) {
       const index = this.items.findIndex(item => item.id === id);
       if (index !== -1) {
@@ -45,4 +46,5 @@ class ItemsController {
       }
       return false;
   }
+
 }

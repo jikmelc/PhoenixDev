@@ -39,6 +39,7 @@ function addItemImageCard(item) {
         </div>
     </div>
     <br/>`;
+
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
@@ -73,6 +74,7 @@ deleteButton.addEventListener('click', function()
     itemsController.deleteItem(index)
 
 });
+
 
 //Captura el evento de modificar al hacer click en el boton "modificar"
 document.addEventListener('click', function(event) {
@@ -126,4 +128,3 @@ function modifyDataCard(itemId) {
     }
 }
  
-
