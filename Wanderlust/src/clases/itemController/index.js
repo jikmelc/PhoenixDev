@@ -29,15 +29,17 @@ function addDataCard()
 
 //Funcion para insertar la card en la pagina
 function addItemImageCard(item) {
-    const itemHTML = '<div class="card" style="width: 18rem;">\n' +
-        '    <img src="' + item.imagesUrl[0] + '" class="card-img-top" alt="image">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">' + item.title + '</h5>\n' +
-        '        <p class="card-text">' + item.text + '</p>\n' +
-        '        <a href="#" class="btn btn-primary">Add</a>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<br/>';
+    const itemHTML = `<div class="card" style="width: 18rem;">
+        <img src="${item.imagesUrl[0]}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+            <p class="card-text">${item.text}</p>
+            <a href="#" class="btn btn-primary">Add</a>
+            <a href="#" class="btn btn-primary modify-btn" data-id="${item.id}">Modify</a>
+        </div>
+    </div>
+    <br/>`;
+
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
@@ -73,4 +75,56 @@ deleteButton.addEventListener('click', function()
 
 });
 
+
+//Captura el evento de modificar al hacer click en el boton "modificar"
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('modify-btn')) {
+        const itemId = parseInt(event.target.getAttribute('data-id'));
+        modifyDataCard(itemId);
+    }
+});
+
+//Funcion que permite modificr la card al capturar el evento
+function modifyDataCard(itemId) {
+    const item = itemsController.items.find(i => i.id === itemId);
+
+    if (item) {
+        // Llenar el formulario con los datos actuales
+        document.querySelector('#newItemTitle').value = item.title;
+        document.querySelector('#newItemPlace').value = item.place;
+        document.querySelector('#newItemText').value = item.text;
+        document.querySelector('#newItemImagesUrl').value = item.imagesUrl[0];
+
+        // Mostrar botón de actualización
+        const updateButton = document.getElementById('updateButton');
+        updateButton.style.display = 'block';
+
+        // Manejar la actualización
+        updateButton.onclick = () => {
+            const updatedData = {
+                title: document.querySelector('#newItemTitle').value,
+                place: document.querySelector('#newItemPlace').value,
+                text: document.querySelector('#newItemText').value,
+                imagesUrl: [document.querySelector('#newItemImagesUrl').value]
+            };
+
+            // Usar el nuevo método updateItem
+            if (itemsController.updateItem(itemId, updatedData)) {
+                // Actualizar la vista
+                const itemsContainer = document.getElementById("list-items");
+                itemsContainer.innerHTML = '';
+                itemsController.items.forEach(addItemImageCard);
+
+                // Limpiar el formulario y ocultar botón de actualización
+                updateButton.style.display = 'none';
+                document.querySelector('#newItemTitle').value = '';
+                document.querySelector('#newItemPlace').value = '';
+                document.querySelector('#newItemText').value = '';
+                document.querySelector('#newItemImagesUrl').value = '';
+            } else {
+                console.error('No se pudo actualizar el item');
+            }
+        };
+    }
+}
  
