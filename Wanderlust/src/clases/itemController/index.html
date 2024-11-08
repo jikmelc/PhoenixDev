@@ -21,7 +21,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="itemController.css">
         <script src="/Wanderlust/src/clases/itemController/itemController.js"></script> 
         <script defer src="/Wanderlust/src/clases/itemController/index.js"></script>
 </head>
@@ -61,14 +61,19 @@
         <div id="list-items"></div>
     </div>
 
-    <button  class="btn btn-primary " id="show">Show Items</button>
-
-    <div>
-
     
+
+    <div style="text-align: center; padding-top: 20px;">
+
+        <button  class="btn btn-primary " id="show">Show Items</button>
 
     </div>
 
+    <div style="text-align: center; padding-top: 20px; width: 300px; margin: auto; ">
+        <p>Ingrese una publicacion a eliminar, indice del 1-10</p>
+        <input  type="text" class="form-control" id="deleteElementInput" >
+        <button  style="margin-top: 15px;" class="btn btn-primary " id="deleteElementButton">Delete</button>
+    </div>
     
 </body>
 
