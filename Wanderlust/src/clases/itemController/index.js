@@ -1,6 +1,7 @@
 const itemsController = new ItemsController(0);
 
-newItemForm.addEventListener('submit', (event) => {
+newItemForm.addEventListener('submit', (event) => 
+    {
     event.preventDefault();
     addDataCard();
 });
@@ -15,6 +16,7 @@ function addDataCard()
     // Crear un array con la URL de la imagen
     const imagesUrlArray = [newItemImagesUrl]; 
 
+    //Pasa datos a metodo addItem en itemController.js
     itemsController.addItem(newItemTitle, newItemPlace, newItemText, imagesUrlArray);
 
     // Limpiar los campos del formulario
@@ -23,12 +25,9 @@ function addDataCard()
     document.querySelector('#newItemText').value = '';
     document.querySelector('#newItemImagesUrl').value = '';
 
-    // Mostrar la nueva card
-   // const newItem = itemsController.getLastItem(); // Obtener el último item agregado
-    //addItemImageCard(newItem);
 } 
 
-
+//Funcion para insertar la card en la pagina
 function addItemImageCard(item) {
     const itemHTML = '<div class="card" style="width: 18rem;">\n' +
         '    <img src="' + item.imagesUrl[0] + '" class="card-img-top" alt="image">\n' +
@@ -41,10 +40,8 @@ function addItemImageCard(item) {
         '<br/>';
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
-
 }
-
- 
+//  Datos de prueba para agregar card pero no usa el itemControler 
 //  addItemImageCard({
 //      'title': 'juice',
 //      'place': 'toluca',
@@ -53,12 +50,27 @@ function addItemImageCard(item) {
 // });
 
 
-const miBoton = document.getElementById('show');
-
-miBoton.addEventListener('click', function() {
-    // Iterar sobre el array items
-    itemsController.items.forEach(item => {
-     
+//Evento que espera click en el boton "show items" en index.html
+const showButton = document.getElementById('show');
+showButton.addEventListener('click', function() {
+    // Iterar sobre el array items para imprimir todos los elementos de itemsController
+    itemsController.items.forEach(item => 
+    {
       addItemImageCard(item); // Mostrar la card del item
     });
-  }, { once: true });
+  }, { once: true });//Para que no se cicle creo
+
+//Evento que espera click en el boton de eliminar
+const deleteButton = document.getElementById('deleteElementButton'); //
+deleteButton.addEventListener('click', function() 
+{
+    //Seleciona el input donde ingreso un numero el usuario, convierte a int y resta uno por index inicia en 0
+    const index = parseInt(document.getElementById("deleteElementInput").value-1 );
+    //Limpia input de delete
+    document.getElementById("deleteElementInput").value=""; 
+    //Llamada a metodo deleteItem en itemController.js
+    itemsController.deleteItem(index)
+
+});
+
+ 
