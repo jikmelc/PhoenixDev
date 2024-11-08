@@ -32,4 +32,17 @@ class ItemsController {
         console.error("Índice inválido");
       }
     }
+
+    updateItem(id, newData) {
+      const index = this.items.findIndex(item => item.id === id);
+      if (index !== -1) {
+          this.items[index] = {
+              ...this.items[index],
+              ...newData,
+              id: this.items[index].id // Mantener el ID original
+          };
+          return true;
+      }
+      return false;
+  }
 }
