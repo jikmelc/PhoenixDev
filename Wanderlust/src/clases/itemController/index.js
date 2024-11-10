@@ -1,4 +1,4 @@
-const itemsController = new ItemsController(0);
+export const itemsController = new ItemsController(0);
 
 newItemForm.addEventListener('submit', (event) => 
     {
@@ -6,7 +6,7 @@ newItemForm.addEventListener('submit', (event) =>
     addDataCard();
 });
 
-function addDataCard()
+export function addDataCard()
 {
     const newItemTitle = document.querySelector('#newItemTitle').value;
     const newItemPlace = document.querySelector('#newItemPlace').value;
@@ -28,7 +28,7 @@ function addDataCard()
 } 
 
 //Funcion para insertar la card en la pagina
-function addItemImageCard(item) {
+export function addItemImageCard(item) {
     const itemHTML = `<div class="card" style="width: 18rem;">
         <img src="${item.imagesUrl[0]}" class="card-img-top" alt="image">
         <div class="card-body">
@@ -53,7 +53,7 @@ function addItemImageCard(item) {
 
 
 //Evento que espera click en el boton "show items" en index.html
-const showButton = document.getElementById('show');
+ export const showButton = document.getElementById('show');
 showButton.addEventListener('click', function() {
     // Iterar sobre el array items para imprimir todos los elementos de itemsController
     itemsController.items.forEach(item => 
@@ -63,7 +63,7 @@ showButton.addEventListener('click', function() {
   }, { once: true });//Para que no se cicle creo
 
 //Evento que espera click en el boton de eliminar
-const deleteButton = document.getElementById('deleteElementButton'); //
+export const deleteButton = document.getElementById('deleteElementButton'); //
 deleteButton.addEventListener('click', function() 
 {
     //Seleciona el input donde ingreso un numero el usuario, convierte a int y resta uno por index inicia en 0
@@ -85,7 +85,7 @@ document.addEventListener('click', function(event) {
 });
 
 //Funcion que permite modificr la card al capturar el evento
-function modifyDataCard(itemId) {
+export function modifyDataCard(itemId) {
     const item = itemsController.items.find(i => i.id === itemId);
 
     if (item) {
