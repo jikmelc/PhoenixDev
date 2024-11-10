@@ -70,6 +70,10 @@ h3{
 
 /*Aquí empieza los estilos de la card sticky del viajero*/
 
+.custom-bg{
+    background-color: #4a4a4a;
+}
+
 #photo-user{
     width: 130px;
     height: 200px;
@@ -78,13 +82,7 @@ h3{
     padding-top: 20px;
 }
 
-/*.card-img-top{
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    align-self: center;
-    padding-top: 20px;
-}*/
+
 .card-title-profile{
     font-family: 'BespokeSans-ExtraboldItalic';
     font-size: 20px;
@@ -126,108 +124,125 @@ h3{
 }
 
 /*Aquí empiezan los estilos de las cards de las publicaciones*/
+/* Publicaciones varias fotos*/
+/* d-block: imagenes*/
+/*carousel-inner: contenedor de imagenes*/
 
-#container-pub{
-    padding-bottom: 20px;
-}
-
-section{
-    height: 450px;
-    width: 710px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-#titlebg{
-    font-family: 'BespokeSans-ExtraboldItalic';
-    font-size: 15px;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-}
-
-#text-photobg{
-    padding-bottom: 15px;
-    top: 0; 
-    left: 0; 
+.ticket-card { 
+    display: flex; 
+    align-items: center; 
+    border-radius: 15px; 
+    overflow: hidden; 
     width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.45); /* Fondo semitransparente */ 
-    color: white; /* Color del texto */ 
-    display: none; /* Oculto por defecto */ 
-    border-radius: 15px;
-}
+    max-width: 750px; /* Ajusta el tamaño máximo según sea necesario */ 
+    margin: auto;
+    padding-bottom: 25px; 
+} 
 
-#textbg-des{
+.ticket-image { 
+    flex: 3; 
+    overflow: hidden;
+} 
+
+.ticket-content { 
+    flex: 1; 
+    padding: 20px;
+    border-left: 4px dotted #f7eed9; 
+    border-radius: 15px;
+    background-color: #4a4a4a; 
+    height: 350px;
+} 
+
+.ticket-content h6 { 
+    font-family: 'BespokeSans-ExtraboldItalic';
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px; 
+} 
+
+.ticket-content p { 
     font-family: "Inter";
     font-size: 15px;
     color: white;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    padding: 15px;
-    align-items: center;
     text-align: justify;
-    text-justify:distribute;
+    margin: 0; 
+} 
+
+.carousel-inner { 
+    display: flex; 
+} 
+
+.carousel-item { 
+    width: 100%; 
+    height: 100%; 
+} 
+
+.carousel-item img { 
+    width: 100%; 
+    height: 350px;
+    border-radius: 20px; 
+}
+
+/* Publicacion un comentario*/
+
+.ticket-single { 
+    display: flex; 
+    align-items: center; 
+    border-radius: 15px; 
+    overflow: hidden;  
+    max-width: 750px; /* Ajusta el tamaño máximo según sea necesario */ 
+    height: 250px;
+    margin: auto;
+    padding-bottom: 25px; 
+} 
+
+.single-image { 
+    flex: 1; 
+    overflow: hidden;
+} 
+
+.single-content { 
+    flex: 3; 
+    padding: 20px;
+    border-left: 15px dotted #f7eed9; 
+    border-radius: 15px;
+    background-color: #4a4a4a; 
+    height: 200px;
+} 
+
+.single-content h6 { 
+    font-family: 'BespokeSans-ExtraboldItalic';
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px; 
+} 
+
+.single-content p { 
+    font-family: "Inter";
+    font-size: 15px;
+    color: white;
+    text-align: justify;
+    margin: 0; 
+} 
+
+.single-inner { 
+    display: flex; 
+} 
+
+.single-item { 
+    width: 100%; 
+    height: 100%; 
+} 
+
+.single-item img { 
+    width: 150px; 
+    height: 150px;
+    border-radius: 80px; 
 }
 
 
-#photobg{
-    
-    background-image: url(../../../assets/perfil/TrenBankok.jpg);
-    padding: 15px;
-    border-radius: 20px;
-    
-}
-
-#photobg:hover #text-photobg{
-    display: flex;
-    transition: all 1s ease-in-out;
-}
-
-#photobg-dos{
-    
-    background-image: url(../../../assets/perfil/Cascada.jpg);
-    padding: 15px;
-    border-radius: 20px;
-    
-}
-
-#photobg-dos:hover #text-photobg{
-    display: flex;
-    transition: all 1s ease-in-out;
-}
-
-#photobg-tres{
-    
-    background-image: url(../../../assets/perfil/Vietnam.jpg);
-    padding: 15px;
-    border-radius: 20px;
-    
-}
-
-#photobg-tres:hover #text-photobg{
-    display: flex;
-    transition: all 1s ease-in-out;
-}
-
-
-
-#photobg-cua{
-    
-    background-image: url(../../../assets/perfil/Tokio.jpg);
-    padding: 15px;
-    border-radius: 20px;
-    
-}
-
-#photobg-cua:hover #text-photobg{
-    display: flex;
-    transition: all 1s ease-in-out;
-}
 
 /*Aquí empieza el footer*/
 
