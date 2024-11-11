@@ -1,3 +1,5 @@
+@import url('../../../components/footerLogIn/footer.css');
+
 #register {
     background-color: black;
     color: white;
@@ -14,4 +16,59 @@
    gap: 100px;
    display: flex;
    justify-content: space-between;
+}
+
+/* Definición de fuentes */
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+}
+
+body {
+    background-color: #f7eed9 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* Títulos y párrafos */
+h2 {
+    font-family: "bespoke-sans-bold";
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+
+h3 {
+    font-family: "bespoke-sans";
+    font-size: 1.5rem;
+  }
+
+p {
+    font-family: "Inter";
+  }
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .d-flex {
+      width: 100%;
+      margin-bottom: 10px;
+    }
 }
