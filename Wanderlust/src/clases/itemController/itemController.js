@@ -9,7 +9,7 @@ class ItemsController {
     {
         const item = {
             id: this.currentId++,
-            
+            //id de Usuario
             title: title,
             place: place,
             text: text,
