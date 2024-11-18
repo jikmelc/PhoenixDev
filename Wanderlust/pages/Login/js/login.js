@@ -2,29 +2,35 @@ import { hashPassword } from '../../registro/js/registroUsuario.js';
 
 export async function iniciarSesion(email, password) {
     try {
-        // Obtener los datos del usuario del Local Storage
-        const usuario = JSON.parse(localStorage.getItem('usuario'));
+        // Obtener el array de usuarios del Local Storage
+        const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-        if (usuario) {
-            // Hashear la contraseña ingresada
-            const hashedPassword = await hashPassword(password);
+        if (usuarios) {
+            // Iterar sobre el array de usuarios
+            let usuarioEncontrado = null;
+            for (let i = 0; i < usuarios.length; i++) {
+                const usuario = usuarios[i];
+                // Hashear la contraseña ingresada
+                const hashedPassword = await hashPassword(password);
 
-            // Comparar la contraseña hasheada con la almacenada
-            if (usuario.userEmail === email && usuario.contraseña === hashedPassword) {
+                // Comparar el correo electrónico y la contraseña hasheada
+                if (usuario.userEmail === email && usuario.contraseña === hashedPassword) {
+                    usuarioEncontrado = usuario;
+                    break; // Salir del bucle si se encuentra el usuario
+                }
+            }
+
+            if (usuarioEncontrado) {
                 console.log('Inicio de sesión exitoso');
                 // Redireccionar a la página principal o mostrar un mensaje de éxito
-                window.location.href = '/pages/feed/feed.html'; 
-
+                window.location.href = '/pages/feed/feed.html';
             } else {
                 alert('Correo electrónico o contraseña incorrectos');
-                // Mostrar un mensaje de error al usuario
             }
         } else {
-            console.error('Usuario no encontrado');
-            // Mostrar un mensaje de error al usuario
+            alert('Usuario no encontrado');
         }
     } catch (error) {
-        console.error('Error al iniciar sesión:', error);
-        // Manejar el error de forma apropiada
+        alert('Error al iniciar sesión:', error);
     }
 }
