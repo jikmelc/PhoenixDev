@@ -15,6 +15,30 @@
     padding-bottom: 15px;
 }
 
+#miFormulario{
+    display: none;
+    gap: 25px;
+    
+}
+
+.form-group{
+   border-radius: 50%;
+
+}
+
+#imagen{
+    gap: 25px;
+    border-radius: 25%;
+    color: black;
+}
+
+.iconoPublicacion{
+   
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
 .box-publi{ 
     width: 100%; 
     max-width: 710px; 

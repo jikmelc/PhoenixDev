@@ -1,3 +1,5 @@
+@import url('../../../components/footerLogIn/footer.css');
+
 #register {
     background-color: black;
     color: white;
@@ -14,4 +16,105 @@
    gap: 100px;
    display: flex;
    justify-content: space-between;
+}
+
+/* Definición de fuentes */
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+}
+
+body {
+    background-color: #f7eed9 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* Títulos y párrafos */
+h2 {
+    font-family: "bespoke-sans-bold";
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+
+h3 {
+    font-family: "bespoke-sans";
+    font-size: 1.5rem;
+  }
+
+p {
+    font-family: "Inter";
+  }
+
+
+/* Tablet (810px y menor) */
+@media screen and (max-width: 810px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo_imagen {
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+    }
+
+    .form1 {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-floating {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+/* Móvil (480px y menor) */
+@media screen and (max-width: 480px) {
+    .logo_imagen {
+        width: 200px;
+        height: 200px;
+        margin: 25px;
+    }
+
+    .form1 {
+        width: 95%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .form-floating {
+        width: 95%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+/* Para pantallas muy pequeñas (320px y menor) */
+@media screen and (max-width: 320px) {
+    .logo_imagen {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
 }
