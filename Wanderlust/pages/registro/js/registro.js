@@ -1,3 +1,5 @@
+import { registrarUsuario } from './registroUsuario.js';
+
 const form = document.querySelector('form');
 const nameField = document.getElementById('campoDeNombres');
 const apellidoPaternoField = document.getElementById('campoDeApellidoPaterno');
@@ -11,16 +13,25 @@ const anoField = document.getElementById('añoDeNacimiento')
 const mesField = document.getElementById('mesDeNacimiento')
 const diaField = document.getElementById('diaDeNacimiento')
 
+/*registrarUsuario({
+    nombres: "Master",
+    apellidoPaterno: "LastName1",
+    apellidoMaterno: "LastName2",
+    userEmail: "antoniodefelipee@gmail.com",
+    userPhone: "+525516537873", 
+    contraseña: "Hola123@", 
+    confirmacionContraseña: "Hola123@",
+    añoDeNacimiento: 1990,
+    mesDeNacimiento: 1,
+    diaDeNacimiento: 1
+  });*/
 // Función para manejar el evento de submit
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    
     // Recoger los datos del formulario
     const data = [...new FormData(form)];
     const dataObject = Object.fromEntries(data);
-
     cleanExistingAlerts();
-
     // Validación de cada campo
     if (!validateName(dataObject)) {
         showErrorAlert(nameField, 'El nombre no debe contener números y no puede estar vacío.');
@@ -41,8 +52,10 @@ form.addEventListener('submit', (event) => {
     } else {
         // Si todos los campos son válidos, limpiar alertas y mostrar mensaje de éxito
         cleanExistingAlerts();
-        // showSuccesMessage(dataObject);
+        await registrarUsuario(dataObject);
+        
     }
+    
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -204,3 +217,5 @@ function validatePasswordsMatch(infoObject) {
 
 //     return isValidContraseña && doPasswordsMatch;
 // }
+//------------------------------------------------------------------------------------------------
+

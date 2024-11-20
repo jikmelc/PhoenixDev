@@ -1,26 +1,27 @@
 class ItemsController {
-    constructor(currentId = 0) {
+    constructor(currentId = 0) 
+    {
         this.items = [];
         this.currentId = currentId;
     }
 
-    addItem(title, place, text, imagesUrl = []) {
+    addItem(title, place, text, imagesUrl = []) 
+    {
         const item = {
             id: this.currentId++,
+            //id de Usuario
             title: title,
             place: place,
             text: text,
             imagesUrl: imagesUrl // Asignar el array de URLs
         };
-
         this.items.push(item);
     }
-    
     // Método para obtener el último item agregado
-    getLastItem() {
+    getLastItem() 
+    {
         return this.items[this.items.length - 1];
     }
-
     //Metodo que borra elemento por index
     deleteItem(index) 
     {   
@@ -29,12 +30,12 @@ class ItemsController {
         this.items.splice(index, 1);
       } else {
         // Muestra un mensaje de error en consola si el índice es inválido
-        console.error("Índice inválido");
+        alert("No existe la publicacion!");
       }
     }
-
-
-    updateItem(id, newData) {
+    
+    updateItem(id, newData) 
+    {
       const index = this.items.findIndex(item => item.id === id);
       if (index !== -1) {
           this.items[index] = {
@@ -45,6 +46,11 @@ class ItemsController {
           return true;
       }
       return false;
-  }
+    }
 
-}
+
+
+
+
+
+}//Fin Item Controller
