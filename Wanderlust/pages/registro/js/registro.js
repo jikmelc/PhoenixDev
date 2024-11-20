@@ -13,18 +13,18 @@ const anoField = document.getElementById('añoDeNacimiento')
 const mesField = document.getElementById('mesDeNacimiento')
 const diaField = document.getElementById('diaDeNacimiento')
 
-registrarUsuario({
+/*registrarUsuario({
     nombres: "Master",
     apellidoPaterno: "LastName1",
     apellidoMaterno: "LastName2",
     userEmail: "antoniodefelipee@gmail.com",
-    userPhone: "+525516537873", // Asegúrate de que el formato del número de teléfono sea válido
-    contraseña: "Hola123@", // Asegúrate de que la contraseña cumpla con los requisitos de seguridad
+    userPhone: "+525516537873", 
+    contraseña: "Hola123@", 
     confirmacionContraseña: "Hola123@",
     añoDeNacimiento: 1990,
     mesDeNacimiento: 1,
     diaDeNacimiento: 1
-  });
+  });*/
 // Función para manejar el evento de submit
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
