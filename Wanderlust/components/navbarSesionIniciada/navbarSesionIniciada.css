@@ -4,6 +4,8 @@
 
 .navbar {
   background-color: #b68c6e !important;
+  height: 150px;
+  max-width:none;
 }
 
 input{
@@ -16,9 +18,10 @@ input{
 }
 
 #wander-logo{
-  height: 50px;
-  width: 80px;
-  padding-left: 35px;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  padding-right: 15px;
 }
 
 #homelogo{
@@ -35,6 +38,7 @@ input{
 #perfil-logo{
   height: 50px;
   width: 75px;
+  padding-bottom: 0%;
   padding-right: 25px;
 }
 
