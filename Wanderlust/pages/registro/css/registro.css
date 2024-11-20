@@ -60,15 +60,61 @@ p {
   }
 
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar-nav {
-      margin-left: auto;
-      margin-right: auto;
+/* Tablet (810px y menor) */
+@media screen and (max-width: 810px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
     }
 
-    .d-flex {
-      width: 100%;
-      margin-bottom: 10px;
+    .logo_imagen {
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+    }
+
+    .form1 {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-floating {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+/* Móvil (480px y menor) */
+@media screen and (max-width: 480px) {
+    .logo_imagen {
+        width: 200px;
+        height: 200px;
+        margin: 25px;
+    }
+
+    .form1 {
+        width: 95%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .form-floating {
+        width: 95%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+/* Para pantallas muy pequeñas (320px y menor) */
+@media screen and (max-width: 320px) {
+    .logo_imagen {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
     }
 }
