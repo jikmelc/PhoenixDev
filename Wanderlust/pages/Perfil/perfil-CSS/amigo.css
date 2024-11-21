@@ -1,6 +1,7 @@
 @import url('../perfil-CSS/bespoke-sans.css');
 @import url('../../../components/footerLogIn/footer.css');
 @import url('../perfil-CSS/movil.css');
+@import url(../../../components/navbarSesionIniciada/navbarSesionIniciada.css);
 
 
 /*color claro #f7eed9
@@ -11,29 +12,6 @@
 
 /* Estilos para los logos y navbar, 
 como es otro tipo de navbar se busca armonía entre varios componentes*/
-#wander-logo{
-    height: 50px;
-    width: 80px;
-    padding-left: 35px;
-}
-
-#homelogo{
-    height: 50px;
-    width: 55px;
-    padding-left: 25px;
-}
-
-#groups-logo{
-    height: 50px;
-    width: 55px;
-}
-
-#perfil-logo{
-    height: 50px;
-    width: 75px;
-    padding-right: 25px;
-}
-
 
 /* Estilos para la barra de navegación */
 .navbar {

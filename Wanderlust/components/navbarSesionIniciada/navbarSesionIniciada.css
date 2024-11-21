@@ -19,9 +19,10 @@ input{
 
 #wander-logo{
   height: 150px;
-  width: 150px;
+  width: 170px;
   border-radius: 100px;
-  padding-right: 15px;
+  padding-right: 5px;
+  padding-top: 10px;
 }
 
 #homelogo{
