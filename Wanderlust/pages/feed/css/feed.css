@@ -9,12 +9,59 @@
     src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
 
-body ,html
-{   
-    background-color: #f7eed9 ;
-    margin: 0;
-    padding: 0;
+.form-floating {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  gap: 20px;
+}
+
+
+
+.container {
+    display: flex; 
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    height: 100vh; /* Altura completa */
+    justify-content: space-between;
+   
+  }
+
+  .notificaciones{
+   
+    height: 50%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacto{
+    background-color: #f7eed9 !important;
+    height: 30%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amigos{
    
     
-     
-}
+    height: 50%;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  
