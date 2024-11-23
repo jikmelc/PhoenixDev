@@ -8,12 +8,13 @@ const imagenesFondo = [
 let indiceImagen = 0;
 
 function cambiarFondo() {
-  const miDiv = document.getElementById("main-container"); 
+  const miDiv = document.getElementById("wallpaper-container"); 
   miDiv.style.backgroundImage = `url(${imagenesFondo[indiceImagen]})`;
+  
   indiceImagen = (indiceImagen + 1) % imagenesFondo.length;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   cambiarFondo();
-  setInterval(cambiarFondo, 4000); 
+  setInterval(cambiarFondo, 6000); 
 });

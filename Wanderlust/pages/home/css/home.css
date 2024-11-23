@@ -1,59 +1,66 @@
 @import url("../../../components/footerLogIn/footer.css");
 @font-face {
     font-family: bespoke-sans-bold;
-    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
 }
   
 @font-face {
     font-family: bespoke-sans;
-    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
 
-body ,html
+body 
 {   
     background-color: #f7eed9 ;
+    text-align: center;
     margin: 0;
-    padding: 0;
-    height: 82.2vh;
-    min-height: fit-content;
-    min-width:fit-content; 
-}
-
-main{
-    
-    transition: background-image 1.5s linear; 
-    background-size:cover;
+    display: flex;
+    min-height: 90vh;
+    max-height: 100vh;
+    transition: background-image 3s linear; 
+    background-size:100%;
     background-repeat: no-repeat;
     text-align: center;
-    
 }
 
-.card {
-   
-    background-color: rgba(255, 255, 255, 0.555); /* Fondo semi-transparente */
-    min-height: 82.2vh;
+article
+{   
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2%;
+    gap: 50px;
+    width: 60vw;
+    font-family: bespoke-sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color:white;
 }
-.card-body
+aside
 {
-    padding: 50px;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+aside img
+{
+    transform: scale(1);
+    border: solid #b68c6e;
+    border-radius: 30px;
+    padding: 2%;
+}
+h1
+{
+    font-size: 7rem;
+}
+h4
+{
+    font-size: 2.5rem;
 }
 
-.button-container{
-    margin-top: auto;
-    padding: 8%;
-   
-}
-.card-title{padding: 20px;}
-.card-text{padding: 20px;}
 
-.btn
-{
-   width: 250px;
-    background-color: #b68c6e;
-    border:1px solid black ;
-} 
-.button-container a:hover
-{
-  background-color:burlywood;
-  color:#b68c6e ;
-}
+
+
