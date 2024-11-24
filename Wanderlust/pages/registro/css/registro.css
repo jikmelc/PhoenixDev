@@ -1,5 +1,48 @@
 @import url('../../../components/footerLogIn/footer.css');
 
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+}
+
+body {
+    background-color: #f7eed9 !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo_imagen {
+    width: 450px;
+    height: 450px;
+    margin: 100px;
+}
+
+#registro {
+    background-color: white;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 #register {
     background-color: black;
     color: white;
@@ -18,23 +61,6 @@
    justify-content: space-between;
 }
 
-/* Definición de fuentes */
-@font-face {
-    font-family: bespoke-sans-bold;
-    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
-}
-
-@font-face {
-    font-family: bespoke-sans;
-    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
-}
-
-body {
-    background-color: #f7eed9 !important;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 .main-content{
   flex: 1;
@@ -42,9 +68,16 @@ body {
 }
 
 /* Títulos y párrafos */
+h1 {
+    font-family: "bespoke-sans-bold";
+    font-size: 2.5rem;
+    text-align: center;
+    color: black;
+  }
+
 h2 {
     font-family: "bespoke-sans-bold";
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
     color: black;
@@ -58,6 +91,10 @@ h3 {
 p {
     font-family: "Inter";
   }
+
+input, label{
+    font-family: "Inter";
+}
 
 
 /* Tablet (810px y menor) */
