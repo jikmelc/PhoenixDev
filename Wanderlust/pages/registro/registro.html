@@ -16,24 +16,20 @@
     
     </head>
 <body>
-    <!-- <header>
-        <div id="navbar-container"></div> 
-        <script>
-            fetch("../../components/navbar/navbar.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            });
-        </script>
-    </header> -->
-
     
     <main class='main-content container mt-4'>
-        <div class="logo d-flex justify-content-center">
+        <!-- <div class="logo d-flex justify-content-center">
+            <a href="../home/home.html">
+              <img src="../../assets/images/sobreNosotros/Logo_brown.svg" alt="Logo Wanderlust" class="logo_imagen">
+            </a>
+          </div> -->
+
+          <div class="logo">
             <a href="../home/home.html">
               <img src="../../assets/images/sobreNosotros/Logo_brown.svg" alt="Logo Wanderlust" class="logo_imagen">
             </a>
           </div>
+
         <form class="row g-3" id="registro" novalidate>
 
             <div>
@@ -42,21 +38,21 @@
             </div>
             <div class="col-md-6">
                 <div class="form-floating mb-3" id="campoDeNombres">
-                    <input type="text" class="form-control" id="nombreUsuario" placeholder="Nombre(s)" name="nombres" required>
+                    <input type="text" class="form-control" id="nombreUsuario" name="nombres" required>
                     <label for="nombreUsuario" class="form-label">Nombre(s)</label>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-floating mb-3" id="campoDeApellidos">
-                    <input type="text" class="form-control" id="apellidoPaterno" placeholder="Apellido paterno" name="apellidos" required>
-                    <label for="apellidoPaterno" class="form-label">Apellido(s)</label>
+                    <input type="text" class="form-control" id="apellidoUsuario" name="apellidos" required>
+                    <label for="apellidoUsuario" class="form-label">Apellido(s)</label>
                 </div>
             </div>
 
 
             <div class="col-md-9"> 
-                <div id="campoFechaNacimiento">
+                <div id="campoDeFechaDeNacimiento">
                     <label class="form-label">Fecha de nacimiento</label>
                     <div class="row">
     
@@ -69,7 +65,6 @@
                         </div>
                         
                         <div class="col-md-4">
-                            <!-- <label for="mesDeNacimiento" class="form-label">Mes</label> -->
                             <select class="form-select" name="mes" id="mesDeNacimiento">
                                 <option selected value="">Mes</option>
                                 <option value="1">Enero</option>
@@ -88,7 +83,6 @@
                         </div>
             
                         <div class="col-md-4">
-                            <!-- <label for="diaDeNacimiento" class="form-label">Día</label> -->
                             <select class="form-select" name="dia" id="diaDeNacimiento">
                                 <option selected value="">Día</option>
                                 <!-- Opciones para los días -->
@@ -99,18 +93,19 @@
                 </div>
                 </div>
 
-            <div class="col-md-3">
-                <label class="form-label" for="sexoUsuario">Género</label>
-                <select class="form-select" name="sexo" id="sexoUsuario">
-                    <option selected>Otro</option>
-                    <option>Femenino</option>
-                    <option>Masculino</option>
-                    <option>Prefiero no responder</option>
+            <div class="col-md-3" id="campoGenero">
+                <label class="form-label" for="generoUsuario">Género</label>
+                <select class="form-select" name="genero" id="generoUsuario">
+                    <option selected value="">Seleccionar</option>
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="O" >Otro</option>
+                    <option value="N">Prefiero no responder</option>
                 </select>
             </div>
 
             <div class="col-md-6">
-                <div class="form-floating mb-3" id="emailField">
+                <div class="form-floating mb-3" id="campoDeEmail">
                     <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" name="userEmail" required>
                     <label for="inputEmail" class="form-label">Correo electrónico</label>
                     <small id="inputEmailHelp" class="form-text text-muted">Ejemplo: usuario@dominio.com</small>
@@ -118,7 +113,7 @@
             </div>
             <!-- Número telefónico del usuario que desea contactarnos -->
             <div class="col-md-6">
-                <div class="form-floating mb-3" id="phoneField">
+                <div class="form-floating mb-3" id="campoDeTelefono">
                     <input type="tel" class="form-control" id="inputPhone" placeholder="Ejemplo: +52 " name="userPhone" required>
                     <label for="inputPhone" class="form-label">Número de teléfono</label>
                     <small id="inputPhoneHelp" class="form-text text-muted">Ejemplo: +52 551909890</small>
@@ -126,7 +121,7 @@
             </div>
 
             <div class="col-md-6">
-                <div id="campoContraseña">
+                <div id="campoDeContraseña">
                     <label for="contraseñaUsuario" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="contraseñaUsuario" name="contraseña">
                     <small id="contraseñaAyuda" class="form-text text-muted">La contraseña debe contener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y un carácter especial.</small>
@@ -134,7 +129,7 @@
             </div>
             
             <div class="col-md-6">
-                <div id="campoConfirmarContraseña">
+                <div id="campoDeConfirmarContraseña">
                     <label for="confirmarContraseñaUsuario" class="form-label">Confirma tu contraseña</label>
                     <input type="password" class="form-control" id="confirmarContraseñaUsuario" name="confirmacionContraseña">
                     <small id="confirmacionAyuda" class="form-text text-muted">Debe coincidir con la contraseña</small>

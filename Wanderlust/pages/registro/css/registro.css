@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: bespoke-sans-bold;
-    src: url(../assets/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
 }
 
 @font-face {
     font-family: bespoke-sans;
-    src: url(../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+    src: url(../../../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
 }
 
 body {
@@ -30,10 +30,11 @@ main {
 }
 
 .logo_imagen {
-    width: 450px;
-    height: 450px;
-    margin: 100px;
+    width: 75%;
+    height: auto;
+    margin: auto;
 }
+
 
 #registro {
     background-color: white;
@@ -41,6 +42,8 @@ main {
     padding: 24px;
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: auto;
 }
 
 #register {
@@ -70,30 +73,25 @@ main {
 /* Títulos y párrafos */
 h1 {
     font-family: "bespoke-sans-bold";
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     text-align: center;
     color: black;
   }
 
 h2 {
-    font-family: "bespoke-sans-bold";
-    font-size: 1.5rem;
+    font-family: "bespoke-sans-regular";
+    font-size: 1.25rem;
     text-align: center;
     font-weight: bold;
     color: black;
   }
 
-h3 {
-    font-family: "bespoke-sans";
-    font-size: 1.5rem;
-  }
-
-p {
-    font-family: "Inter";
-  }
-
-input, label{
-    font-family: "Inter";
+p, input, label{
+    font-family: "Manrope";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
 }
 
 
@@ -110,7 +108,7 @@ input, label{
         margin: 50px;
     }
 
-    .form1 {
+    form {
         width: 90%;
         padding: 15px;
     }
@@ -122,6 +120,12 @@ input, label{
     button {
         width: 80%;
     }
+
+    #division_boton {
+        gap: 50px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
 
 /* Móvil (480px y menor) */
@@ -145,6 +149,12 @@ input, label{
     button {
         width: 90%;
     }
+
+    #division_boton {
+        gap: 15px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
 
 /* Para pantallas muy pequeñas (320px y menor) */
@@ -154,4 +164,10 @@ input, label{
         height: 150px;
         margin: 15px;
     }
+
+    #division_boton {
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
