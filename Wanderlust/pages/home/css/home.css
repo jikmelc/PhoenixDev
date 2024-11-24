@@ -35,7 +35,7 @@ article
     flex-direction: column;
     min-height: 100vh;
     padding: 2%;
-    gap: 60px;
+    gap: 55px;
     width: 60vw;
     font-family: bespoke-sans;
     display: flex;
@@ -48,7 +48,7 @@ article
 
 aside
 {
-    width: 40vw;
+    width: 45vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ aside img
 {
     
     padding: 2%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     width: 100%; /* Ajustar el ancho al 100% del contenedor */
     height: auto; 
   
