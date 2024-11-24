@@ -14,20 +14,16 @@
 body 
 {
   background-color: #f7eed9 !important;
-  /* position: relative; */
-  /* height: 100%; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us 
 {
-  background-color: #f7eed9;
+  background-color:  #f7eed9;
   padding-bottom: 10px; /* Ajuste para mayor espaciado */
   display: grid;
-}
-
-.our-team {
-  background-color: white;
-  gap: 25px;
 }
 
 h1 {
@@ -43,8 +39,8 @@ h2 {
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
-  margin-top: 20px;
-  
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .card img{
@@ -52,6 +48,32 @@ h2 {
   height: auto;
   margin: 10px;
 }
+
+/* Efecto de hover para la card */
+.card:hover {
+  background-color: #d5a86d; /* Color de fondo al hacer hover (puedes cambiarlo) */
+  color: #fff; /* Cambiar color del texto */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la card */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño de la card */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Opcional: Cambiar color de las etiquetas <span> dentro del texto */
+.card:hover .card-text span {
+  font-weight: bold; /* Cambiar color de las palabras resaltadas */
+  color: #4a4a4a;
+}
+
+.card:hover .card-title {
+  font-weight: bold; /* Cambiar color de las palabras resaltadas */
+  color: #4a4a4a;
+}
+
+/* Opción adicional para mejorar la visibilidad de los textos */
+/* .card-body {
+  transition: all 0.3s ease-in-out;
+} */
+
 
 h5 {
   font-family: "bespoke-sans";
@@ -69,20 +91,17 @@ p
 span{
   font-family: "Inter";
   font-size: 1.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .subtitle {
   margin-top: 25px;
 }
 /* Estilos para las cartas */
-.card 
-{
-  margin-top: 25px;
-}
+
 .card-member 
 {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: flex;
   align-items: center;
 }
@@ -90,7 +109,9 @@ span{
 {
   width: 150px; /* Tamaño de imagen fijo */
   height: auto;
-  margin-right: 15px;
+  margin-top: 25px;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 .card-member h5{
@@ -106,10 +127,12 @@ span{
 }
 
 /* Carrusel */
-#carouselExampleFade {
-  margin-left: 10%;
-  margin-right: 10%;
+
+.carousel-inner {
+  margin: 20px;
+  padding: 25px;
 }
+
 .imagenizquierda
 {
   display: flex;
