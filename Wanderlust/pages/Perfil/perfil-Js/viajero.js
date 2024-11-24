@@ -1,10 +1,65 @@
-// import { itemsController,addDataCard,addItemImageCard,showButton, deleteButton, modifyDataCard } from '../../../src/clases/itemController/index.js';
+document.addEventListener("DOMContentLoaded", () => {
+    // Obtener elementos
+    const openFormBtn = document.getElementById("open-form-btn");
+    const closeFormBtn = document.getElementById("close-form-btn");
+    const modal = document.getElementById("post-modal");
+    const postTypeSelect = document.getElementById("post-type");
+    const reviewFields = document.getElementById("review-fields");
+    const modalContent = modal.querySelector('.modal-content');
 
-function mostrarFormulario() {
-    const formulario = document.getElementById('miFormulario');
-    if (formulario.style.display === 'none' || formulario.style.display === '') {
-        formulario.style.display = 'block'; // Muestra el formulario
-    } else {
-        formulario.style.display = 'none'; // Oculta el formulario si ya está visible
+    // Función para mostrar el modal
+    const showModal = () => {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        updateFields(); // Actualizar campos según el tipo de publicación
+    };
+
+    // Función para ocultar el modal
+    const hideModal = () => {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+    };
+
+    // Función para actualizar los campos según el tipo de publicación
+    const updateFields = () => {
+        if (postTypeSelect.value === "review") {
+            reviewFields.classList.remove("hidden");
+        } else {
+            reviewFields.classList.add("hidden");
+        }
+    };
+
+    // Evento para abrir el modal
+    openFormBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showModal();
+    });
+
+    // Evento para cerrar el modal
+    closeFormBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        hideModal();
+    });
+
+    // Cerrar al hacer clic fuera del modal
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            hideModal();
+        }
+    });
+
+    // Prevenir que los clics dentro del modal-content se propaguen al modal
+    if (modalContent) {
+        modalContent.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
     }
-}
+
+    // Evento para actualizar los campos cuando cambia el tipo de publicación
+    if (postTypeSelect) {
+        postTypeSelect.addEventListener("change", updateFields);
+    }
+
+    // Inicializar el estado de los campos al cargar la página
+    updateFields();
+});
