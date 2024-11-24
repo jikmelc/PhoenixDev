@@ -32,11 +32,13 @@
     color: black;
 }
 
+
+
 .iconoPublicacion{
    
    display: flex;
    align-items: center;
-   cursor: pointer;
+   padding-bottom: 5px;
 }
 
 .box-publi{ 

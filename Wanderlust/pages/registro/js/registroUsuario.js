@@ -16,8 +16,8 @@ export async function registrarUsuario(userData) {
             const alreadyRegistered=usuariosExistentes.some(usuario => usuario.userEmail === userData.userEmail)
             if(alreadyRegistered)
             {
-                alert("El correo que intenta ingresar ya esta registrado!");
-                console.log("Error de correo")
+                alert("El correo que intenta ingresar ya esta registrado.");
+                console.log("Error de correo.")
             }
             else
             {
@@ -26,7 +26,7 @@ export async function registrarUsuario(userData) {
                 usuariosExistentes.push(userData)
                 // Guardar los datos del usuario en el Local Storage
                 localStorage.setItem('usuarios', JSON.stringify(usuariosExistentes));
-                alert('Usuario registrado con éxito:', userData);
+                alert('Usuario registrado con éxito.', userData);
                 window.location.href = '/pages/feed/feed.html'; 
             }
     } catch (error) 

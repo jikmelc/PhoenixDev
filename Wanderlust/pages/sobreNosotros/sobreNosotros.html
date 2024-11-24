@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/sobreNosotros.css">
   <link rel="stylesheet" href="../../components/navbar/navbar.css">
@@ -37,7 +39,7 @@
           <div class="col-md-10">
             <div class="card-body">
               <h5 class="card-title">Misión</h5>
-              <p class="card-text">Buscamos motivar a las personas a que exploren el mundo, a que viajeros compartan sus opiniones y recomendaciones en un entorno de convivencia dónde sabemos que cada experiencia es única.</p>
+              <p class="card-text">Buscamos motivar a las personas a que <span>exploren el mundo</span>, a que viajeros <span>compartan sus opiniones y recomendaciones</span> en un entorno de convivencia dónde sabemos que cada experiencia es única.</p>
             </div>
           </div>
         </div>
@@ -52,7 +54,7 @@
     <div class="col-md-10 ">
       <div class="card-body">
         <h5 class="card-title">Visión</h5>
-        <p class="card-text">Buscamos revolucionar la forma en que las personas experimentan el mundo a través de una comunidad activa que se apoye mutuamente para lograr ser la mejor opción al momento de buscar recomendaciones de lugares, con el realismo que otras redes sociales no ofrecen.</p>
+        <p class="card-text">Buscamos <span>revolucionar la forma en que las personas experimentan el mundo</span> a través de una comunidad activa que se apoye mutuamente para lograr ser la mejor opción al momento de buscar recomendaciones de lugares, con el realismo que otras redes sociales no ofrecen.</p>
       </div>
     </div>
   </div>
@@ -103,6 +105,12 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Segundo conjunto de cartas -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card card-member">
                 <img src="/../../assets/images/sobreNosotros/Carlos.png" class="card-img-left" alt="...">
@@ -112,12 +120,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Segundo conjunto de cartas -->
-        <div class="carousel-item">
-          <div class="row justify-content-center">
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card card-member">
                 <img src="/../../assets/images/sobreNosotros/German.png" class="card-img-left" alt="...">
@@ -127,6 +129,13 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Tercer conjunto de cartas -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card card-member">
                 <img src="/../../assets/images/sobreNosotros/Felipe.png" class="card-img-left" alt="...">
@@ -136,27 +145,13 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Tercer conjunto de cartas -->
-        <div class="carousel-item">
-          <div class="row justify-content-center">
             <div class="col-12 col-sm-6 col-md-4">
               <div class="card card-member">
                 <img src="/../../assets/images/sobreNosotros/Paulina.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paulina Guadalupe Herrera Sánchez</h5>
                   <p class="card-text">Desarrolladora web creativa con habilidades en HTML, CSS, Bootstrap, Java y JavaScript. Me enfoco en crear experiencias de usuario excepcionales a través de interfaces atractivas y funcionales.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="card card-member">
-                <img src="/../../assets/images/sobreNosotros/Mayte.png" class="card-img-left" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Tania Mayte Morales Martínez</h5>
-                  <p class="card-text">Desarrolladora especializada en la creación de aplicaciones web y sistemas de gestión. Con experiencia en proyectos ágiles y un enfoque en tecnologías fullstack como Java, se dedica a desarrollar soluciones digitales que optimizan procesos empresariales.</p>
                 </div>
               </div>
             </div>
@@ -177,12 +172,12 @@
   </main>
 
   <footer>
-    <div id="footer-container"></div> 
+    <div class="footer-container"></div> 
     <script>
       fetch("../../components/footerLogIn/footer.html")
         .then(response => response.text())
         .then(html => {
-          document.getElementById('footer-container').innerHTML = html;
+          document.querySelector('.footer-container').innerHTML = html;
         });
     </script>
   </footer>
