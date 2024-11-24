@@ -15,28 +15,37 @@ body
     text-align: center;
     margin: 0;
     display: flex;
-    min-height: 90vh;
-    max-height: 100vh;
-    transition: background-image 3s linear; 
-    background-size:100%;
+    min-height: auto;
+    transition: background-image 4s linear; 
+    background-size:cover;
     background-repeat: no-repeat;
-    text-align: center;
+    min-width: auto;
+  
 }
-
+#btn-red-container
+{
+    width:100%;
+}
+#btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
+    margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
+    margin-left:10vw ;
+}
 article
 {   
     flex-direction: column;
     min-height: 100vh;
     padding: 2%;
-    gap: 50px;
+    gap: 60px;
     width: 60vw;
     font-family: bespoke-sans;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     text-align: left;
     color:white;
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 aside
 {
     width: 40vw;
@@ -44,23 +53,75 @@ aside
     justify-content: center;
     align-items: center;
     padding: 2%;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: auto;
 }
 aside img
 {
-    transform: scale(1);
-    border: solid #b68c6e;
-    border-radius: 30px;
+    
     padding: 2%;
+    margin-bottom: 10%;
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    height: auto; 
+  
 }
 h1
 {
     font-size: 7rem;
+    text-shadow: 2px 2px 4px black;
+  
 }
 h4
 {
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px black;
+    
 }
 
 
+@media (max-width: 850px) {
+    body {
+     flex-direction: column-reverse;
+     
+      overflow-y:hidden;
+      overflow-x: scroll;
+     
+    }
+  
+    article{
+      width: 100%; /* Los elementos ocupan todo el ancho */
+      padding: 0%; /* Ajustar el padding */
+      gap: 50px;
+      justify-content:start;
+      text-align: center;
+      min-width: 500px; 
+      
+    }
+    #btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
+        margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
+        margin-left:0vw ;
+    }
+    aside{
+        width:100%; /* Los elementos ocupan todo el ancho */
+        padding: 0%; /* Ajustar el padding */
+        height: 30vh;
+        min-width: 500px; 
+      }
+  
+    h1 {
+      font-size: 3rem; /* Ajustar tamaño de fuente */
+    }
+  
+    h4 {
+      font-size: 1.5rem; /* Ajustar tamaño de fuente */
+    }
+    aside img
+{
+    padding: 10%;
+    margin-bottom: 0%;
+    min-width: 500px; /* Ajustar el ancho al 100% del contenedor */
+    height: auto; 
+    transform: scale(.6);
 
-
+}
+  }
