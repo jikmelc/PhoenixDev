@@ -1,6 +1,7 @@
 /* @import url('../perfil-CSS/bespoke-sans.css'); */
 @import url('../perfil-CSS/amigo.css');
-/* @import url('../perfil-CSS/movil.css'); */
+@import url('../perfil-CSS/movil.css'); 
+@import url('../../../components/navbarSesionIniciada/navbarSesionIniciada.css');
 
 
 /*color claro #f7eed9

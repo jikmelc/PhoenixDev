@@ -10,22 +10,7 @@
 /*color tipo dorado #d5a86d
 /*color oscuro #4a4a4a
 
-/* Estilos para los logos y navbar, 
-como es otro tipo de navbar se busca armonía entre varios componentes*/
 
-/* Estilos para la barra de navegación */
-.navbar {
-    background-color: #b68c6e !important;
-}
-
-input{
-    border-radius: 25px;
-    border-color: #4a4a4a;
-    width: 520px;
-    text-align: center;
-    font-family: 'BespokeSans-LightItalic';
-    font-size:small;
-}
 
 /*Estilos generales*/
 
@@ -223,40 +208,4 @@ h3{
 
 
 
-/*Aquí empieza el footer*/
 
-
-
-/* footer{
-    background-color: #d5a86d;
-    height: 70px;
-}
-
-.container-foot{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-#logo-ins{
-    height: 55px;
-    width: 55px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#logo-f{
-    height: 50px;
-    width: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#logo-x{
-    height: 50px;
-    width: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-} */
-
-/*Aquí empiezan los estilos para la versión móvil o tablet*/
