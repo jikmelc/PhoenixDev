@@ -9,12 +9,248 @@
     src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
 
-body ,html
-{   
-    background-color: #f7eed9 ;
-    margin: 0;
-    padding: 0;
-   
-    
-     
+.form-floating {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  gap: 20px;
 }
+
+body{
+  background-color: #f7eed9 ;
+}
+
+main{
+  background-color: #f7eed9 ;
+}
+
+
+.container {
+  background-color: #f7eed9 ;
+    display: flex; 
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    height: 100vh; /* Altura completa */
+    justify-content: space-between;
+    gap: 40px;
+   
+  }
+
+  .notificaciones{
+   
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacto{
+   
+    background-color: #f7eed9 !important;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+
+  /* feeeeeddd */
+
+  .medio{
+    background-color: #f7eed9 ;
+    gap: 15px;
+  }
+
+  .medio .publicaciones .publicacion{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+  }
+
+  .medio .head{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .medio .head .user{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .medio .botones-accion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem;
+   
+  }
+
+  .medio .likes{
+    display: flex;
+  }
+
+  .medio .likes span{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid;
+    margin-left: -0.6rem;
+  }
+
+  .medio .likes span:first-child{
+    margin: 0;
+  }
+
+  .medio .likes p{
+  margin-left: .5rem;
+  }
+
+  .perfil{  
+    
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    overflow: hidden;
+   
+  }
+
+ #perfil1{
+  width: 100%;
+ }
+  
+ #foto_viaje{
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+ }
+
+ /* Derechaaaaa */
+ main .container .derecha{
+  height: max-content;
+  position: sticky;
+  top: -18rem;
+  bottom: 0;
+ }
+
+ .derecha .mensajes{
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+
+ }
+
+ .derecha .mensajes .heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+ }
+
+ .derecha .mensajes i{
+  font-size: 1.4rem;
+ }
+
+ .derecha .mensajes .search-bar{
+  display: flex;
+  background: transparent;
+  width: 30vh;
+  margin-left: 1rem;
+  
+ }
+
+ .derecha .mensajes .categoria{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+ }
+
+ .derecha .mensajes .categoria h6{
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid white;
+  padding-bottom: 0.5rem;
+
+ }
+
+ .derecha .mensajes .categoria .active{
+  border-color: black;
+ }
+
+ .derecha .mensajes .mensaje{
+  display:flex ;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+ }
+
+ .derecha .mensajes .mensaje p{
+  font-size: 0.8rem;
+ }
+
+ .derecha .mensajes .perfil{
+  position: relative;
+  overflow: visible;
+ }
+
+ .derecha .mensajes .perfil img{
+border-radius: 50%;
+width: 100%;
+ }
+
+ .derecha .mensajes .perfil .active{
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid;
+
+  background-color: greenyellow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+ }
+
+ /* Solicitudes */
+ .derecha .solicitudes{
+  margin-top: 1rem;
+ }
+
+ .derecha .solicitudes h4{
+  color: gray;
+  margin: 1rem 0;
+ }
+
+ .derecha .solicitudes .solicitud{
+background-color: white;
+padding: 1rem;
+border-radius: 1rem;
+margin-bottom: 0.7rem;
+ }
+ 
+ .derecha .solicitudes .info{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+ }
+
+ .derecha .solicitudes .info img{
+ width: 100%;
+ }
+
+ .derecha .solicitudes .acciones-solicitud{
+  display: flex;
+  gap: 1rem;
+ }
