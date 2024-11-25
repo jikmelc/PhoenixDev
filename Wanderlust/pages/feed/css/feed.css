@@ -28,18 +28,37 @@ main{
   background-color: #f7eed9 ;
 }
 
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-.container {
+.btn{
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+
+}
+
+/* .container {
   background-color: #f7eed9 ;
     display: flex; 
     width: 100%;
-    max-width: 1200px; /* Limitar el ancho máximo */
-    height: 100vh; /* Altura completa */
+    max-width: 1200px; 
+    height: 100vh; 
     justify-content: space-between;
     gap: 40px;
-   
-  }
+  } */
 
+  .container{
+    display: grid;
+    grid-template-columns: 18vh auto 20vw;
+    column-gap: 2rem;
+    position: relative;
+  }
   .notificaciones{
    
     height: 50%;
@@ -68,6 +87,34 @@ main{
   .medio{
     background-color: #f7eed9 ;
     gap: 15px;
+  }
+
+  .medio .crear_publicacion{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #publicar{
+    background-color: blue;
+    align-items: center;
+    color: white;
+    width: 60px;
+    height: 60px;
+  }
+
+  .medio .crear_publicacion input[type="text"]{
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background-color: transparent;
+    color: black;
+    margin-right: 1rem;
   }
 
   .medio .publicaciones .publicacion{
@@ -156,12 +203,14 @@ main{
   position: sticky;
   top: -18rem;
   bottom: 0;
+  gap: 3rem;
  }
 
  .derecha .mensajes{
   background-color: white;
   border-radius: 1rem;
   padding: 1rem;
+  
 
  }
 
@@ -218,10 +267,10 @@ main{
   overflow: visible;
  } 
 
- .derecha .mensajes .perfil img{
+  .derecha .mensajes .perfil img{
 border-radius: 50%;
 width: 100%;
- }
+ } 
 
  .derecha .mensajes .perfil .active{
   width: 0.8rem;
@@ -258,9 +307,7 @@ margin-bottom: 0.7rem;
   margin-bottom: 1rem;
  }
 
- .derecha .solicitudes .info img{
- width: 100%;
- }
+ 
 
  .derecha .solicitudes .acciones-solicitud{
   display: flex;
