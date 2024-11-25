@@ -11,7 +11,6 @@
         background-color: #b68c6e !important;
         height: 150px;
         margin: 0%;
-        max-width:none;
         align-items: center;
         justify-content: space-evenly;
         padding: 0%
@@ -83,22 +82,23 @@
       
     .menu-icon {
         position: relative;
-        display: inline-block;
+        display: inline;
     }
       
       
     .dropdown-menu {
         display: none;
-        position: absolute;
+        position: relative;
         background-color: #f9f9f9;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        width: 35px;
-        height: fit-content;
+        
     }
       
     .dropdown-menu li {
         list-style: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: smaller;
     }
       
     .dropdown-menu li a {

@@ -6,6 +6,7 @@
   background-color: #b68c6e !important;
   height: 140px;
   max-width:none;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
   
@@ -78,9 +79,12 @@ input{
 .dropdown-menu {
   display: none;
   position: absolute;
+  top: 100%;
+  left: -130px;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  
 }
 
 .dropdown-menu li {
