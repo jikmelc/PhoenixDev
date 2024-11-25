@@ -1,4 +1,5 @@
 @import url('../../../components/footerLogIn/footer.css');
+@import url('../../../components/navbar/navbar.css');
 
 /* Definición de fuentes */
 @font-face 
@@ -29,14 +30,14 @@ body
 h1 {
   font-family: "bespoke-sans-bold";
   font-size: 3rem;
-  text-align: center;
+  /* text-align: center; */
   color: black;
 }
 
 /* Títulos y párrafos */
 h2 {
   font-family: "bespoke-sans-bold";
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
   margin-top: 50px;

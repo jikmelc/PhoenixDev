@@ -1,4 +1,5 @@
 @import url('../../../components/footerLogIn/footer.css');
+@import url('../../../components/navbar/navbar.css');
 
 /* Definición de fuentes */
 @font-face {
@@ -18,8 +19,21 @@ body {
     flex-direction: column;
 }
 
+form {
+  border-radius: 10px;
+  background-color: white;
+  padding: 24px;
+  margin: 24px;
+  width: 60%;
+  height: auto;
+}
+
 .main-content{
+  margin-top: 80px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Títulos y párrafos */
@@ -45,7 +59,7 @@ p {
 .btn{
     background-color: #d5a86d !important;
     border-color: #b68c6e !important;
-    width: 200px;
+    width: 120px;
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -53,6 +67,10 @@ p {
     .navbar-nav {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    input, label, small {
+      font-size: 0.75rem;
     }
 
     .d-flex {
