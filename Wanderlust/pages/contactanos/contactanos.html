@@ -18,18 +18,18 @@
 
 </head>
 <body class="vh-100" data-spy="scroll">
-    <header>
-        <div id="navbar-container"></div> 
-        <script>
-            fetch("../../components/navbar/navbar.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            });
-        </script>
-    </header>
+    <header id="navbar">
+        <nav class="navbar navbar-expand-sm  navbar-container navbar-dark "></nav>
+      <script>
+        fetch("../../components/navbar/navbar.html")
+          .then(response => response.text())
+          .then(html => {
+            document.querySelector('.navbar-container').innerHTML = html;
+          });
+      </script>
+      </header>
     
-    <main class='main-content container mt-4'>
+    <main class='main-content container mt-6'>
         <h1 class="text-center">Contáctanos</h1>
         <form novalidate>
             <!-- Nombre del usuario que quiere contactarnos -->

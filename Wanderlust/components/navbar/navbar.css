@@ -1,23 +1,38 @@
-.navbar-container
-{  
-padding: 5px 20px 5px 20px;
-background-image: radial-gradient(at 48.9415657957144% 42.54975011993949%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 1) 0%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 0) 100%), radial-gradient(at 46.91505894979346% 84.83285991552954%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 1) 0%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 0) 100%), radial-gradient(at 10.933981823600881% 38.798706654720675%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 1) 0%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 0) 100%), radial-gradient(at 49.777719885059504% 41.184605657851314%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 1) 0%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 0) 100%), radial-gradient(at 72.45907116841161% 13.666137151782465%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 1) 0%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 0) 100%), radial-gradient(at 43.176414736790925% 77.21879322323642%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 1) 0%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 0) 100%), radial-gradient(at 28.603941300954403% 70.8590364181733%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 1) 0%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 0) 100%), radial-gradient(at 45.36957530770147% 90.04017981715147%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 1) 0%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 0) 100%), radial-gradient(at 8.71832818222078% 55.48741905359908%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 1) 0%, hsla(25.000000000000007, 33.02752293577982%, 57.25490196078431%, 0) 100%), radial-gradient(at 33.3662526684619% 32.661063556285484%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 1) 0%, hsla(25.333333333333314, 27.607361963190186%, 68.03921568627452%, 0) 100%);
+@font-face 
+{
+  font-family: bespoke-sans-bold;
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf');
 }
+
+/* header {
+    position: relative;
+    width: 100%;
+} */
+
+.navbar-container {  
+    padding: 5px 20px 5px 20px;
+    background-color: #f7eed9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);   
+}
+
 
 .navbar-logo img
 {
-    height: 80px;
-    padding-left: 3vh;
-}
-.navbar-links
-{   
-    display: flex;
-    justify-content: center;
+    height: 100px;
+    padding-left: 24px;
 }
 
 .navbar
 {
     min-height: 10vh;
+    position: relative;
+    width: 100%;
 }
 .btn
 {
@@ -31,6 +46,21 @@ background-image: radial-gradient(at 48.9415657957144% 42.54975011993949%, hsla(
 }
 
 .btn-container {
-    padding-right: 3vh;
+    padding-right: 24px;
     
 }
+
+#wanderlust-name {
+    font-family: "bespoke-sans-bold";
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+.navbar-title {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+  }
