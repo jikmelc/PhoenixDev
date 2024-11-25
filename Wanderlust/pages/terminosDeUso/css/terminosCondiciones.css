@@ -13,7 +13,9 @@ h1 {
     margin-top: 30px;
 }
 
-
+body {
+    background-color: #f7eed9;
+}
 
 .container{
     width: 70%;
@@ -21,8 +23,8 @@ h1 {
     margin: auto;
     background-color: #f7eed9;
     border-radius: 1%;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2%;
+    /* box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 24px;
 }
 
 
