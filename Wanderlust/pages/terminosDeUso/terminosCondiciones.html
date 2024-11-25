@@ -22,20 +22,22 @@
 
 
 </head>
-<!-- <header>
-    <div id="navbar-container"></div>
-    <script>
-        fetch("../../components/navbar/navbar.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            });
-    </script>
-</header> -->
 
 
 
 <body>
+    
+    <header id="navbar">
+        <nav class="navbar navbar-expand-sm  navbar-container navbar-dark "></nav>
+      <script>
+        fetch("../../components/navbar/navbar.html")
+          .then(response => response.text())
+          .then(html => {
+            document.querySelector('.navbar-container').innerHTML = html;
+          });
+      </script>
+    </header>
+
     <div class="container">
         <h1 id="title">Términos y condiciones</h1>
         <br>
@@ -130,7 +132,7 @@
             <br>
     
             <h2>10. Contacto</h2>
-            <p>Si tienes preguntas o inquietudes sobre este aviso, comunícate con nosotros en la sección de <a href="">Contáctanos</a></p>
+            <p>Si tienes preguntas o inquietudes sobre este aviso, comunícate con nosotros en la sección de <a href="../contactanos/contactanos.html" id="contacto">Contáctanos.</a></p>
             <br>
 
      
