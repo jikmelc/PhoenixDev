@@ -1,59 +1,127 @@
 @import url("../../../components/footerLogIn/footer.css");
 @font-face {
     font-family: bespoke-sans-bold;
-    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
 }
   
 @font-face {
     font-family: bespoke-sans;
-    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
 
-body ,html
+body 
 {   
     background-color: #f7eed9 ;
+    text-align: center;
     margin: 0;
-    padding: 0;
-    height: 82.2vh;
-    min-height: fit-content;
-    min-width:fit-content; 
-}
-
-main{
-    
-    transition: background-image 1.5s linear; 
+    display: flex;
+    min-height: auto;
+    transition: background-image 4s linear; 
     background-size:cover;
     background-repeat: no-repeat;
-    text-align: center;
+    min-width: auto;
+  
+}
+#btn-red-container
+{
+    width:100%;
+}
+#btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
+    margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
+    margin-left:10vw ;
+}
+article
+{   
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2%;
+    gap: 55px;
+    width: 60vw;
+    font-family: bespoke-sans;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: left;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+aside
+{
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: auto;
+}
+aside img
+{
+    
+    padding: 2%;
+    margin-bottom: 15%;
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    height: auto; 
+  
+}
+h1
+{
+    font-size: 7rem;
+    text-shadow: 2px 2px 4px black;
+  
+}
+h4
+{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px black;
     
 }
 
-.card {
-   
-    background-color: rgba(255, 255, 255, 0.555); /* Fondo semi-transparente */
-    min-height: 82.2vh;
-}
-.card-body
-{
-    padding: 50px;
-}
 
-.button-container{
-    margin-top: auto;
-    padding: 8%;
-   
-}
-.card-title{padding: 20px;}
-.card-text{padding: 20px;}
+@media (max-width: 850px) {
+    body {
+     flex-direction: column-reverse;
+     
+      overflow-y:hidden;
+      overflow-x: scroll;
+     
+    }
+  
+    article{
+      width: 100%; /* Los elementos ocupan todo el ancho */
+      padding: 0%; /* Ajustar el padding */
+      gap: 50px;
+      justify-content:start;
+      text-align: center;
+      min-width: 500px; 
+      
+    }
+    #btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
+        margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
+        margin-left:0vw ;
+    }
+    aside{
+        width:100%; /* Los elementos ocupan todo el ancho */
+        padding: 0%; /* Ajustar el padding */
+        height: 30vh;
+        min-width: 500px; 
+      }
+  
+    h1 {
+      font-size: 3rem; /* Ajustar tamaño de fuente */
+    }
+  
+    h4 {
+      font-size: 1.5rem; /* Ajustar tamaño de fuente */
+    }
+    aside img
+{
+    padding: 10%;
+    margin-bottom: 0%;
+    min-width: 500px; /* Ajustar el ancho al 100% del contenedor */
+    height: auto; 
+    transform: scale(.6);
 
-.btn
-{
-   width: 250px;
-    background-color: #b68c6e;
-    border:1px solid black ;
-} 
-.button-container a:hover
-{
-  background-color:burlywood;
-  color:#b68c6e ;
 }
+  }
