@@ -68,7 +68,7 @@ input{
 #perfil-logo{
   height: 50px;
   width: 55px;
- 
+  margin-right: 45px;
 }
 
 
@@ -76,6 +76,8 @@ input{
   position: relative;
   display: inline-block;
 }
+
+
 
 
 .dropdown-menu {
@@ -86,7 +88,7 @@ input{
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  
+  border-radius: 30px;
 }
 
 .dropdown-menu li {
@@ -101,7 +103,8 @@ input{
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f1f1f1;
+  background-color: #c2b1a5;
+  border-radius: 20px;
 }
 
 .menu-icon:hover .dropdown-menu {
