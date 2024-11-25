@@ -1,4 +1,5 @@
 @import url("../../../components/footerLogIn/footer.css");
+@import url("../../../components/navbarSesionIniciada/navbarSesionIniciada.css");
 @font-face {
     font-family: bespoke-sans-bold;
     src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
