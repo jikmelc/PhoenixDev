@@ -10,6 +10,8 @@
     src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
 }
 
+
+
 .form-floating {
   display:flex;
   justify-content: center;
@@ -18,7 +20,7 @@
   gap: 20px;
 }
 
-body{
+html{
   background-color: #f7eed9 ;
 }
 
@@ -70,7 +72,7 @@ main{
 
   .medio .publicaciones .publicacion{
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 2rem;
     padding: 1rem;
     margin: 1rem 0;
     line-height: 1.5;
@@ -80,6 +82,9 @@ main{
 
   }
 
+  
+
+
   .medio .head{
     display: flex;
     justify-content: space-between;
@@ -88,6 +93,15 @@ main{
   .medio .head .user{
     display: flex;
     gap: 1rem;
+  }
+
+  .medio .head .user .perfil{
+    border-radius: 100%;
+  }
+  #perfil1{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
   }
 
   .medio .botones-accion{
@@ -123,15 +137,12 @@ main{
   .perfil{  
     
     width: 2.7rem;
-    aspect-ratio: 1/1;
+    aspect-ratio:1/1;
     border-radius: 100%;
     overflow: hidden;
    
   }
 
- #perfil1{
-  width: 100%;
- }
   
  #foto_viaje{
   width: 100%;
@@ -202,10 +213,10 @@ main{
   font-size: 0.8rem;
  }
 
- .derecha .mensajes .perfil{
+.derecha .mensajes .perfil{
   position: relative;
   overflow: visible;
- }
+ } 
 
  .derecha .mensajes .perfil img{
 border-radius: 50%;

@@ -1,7 +1,7 @@
 @import url('../perfil-CSS/bespoke-sans.css');
 @import url('../../../components/footerLogIn/footer.css');
 @import url('../perfil-CSS/movil.css');
-@import url(../../../components/navbarSesionIniciada/navbarSesionIniciada.css);
+@import url('../../../components/navbarSesionIniciada/navbarSesionIniciada.css');
 
 
 /*color claro #f7eed9
@@ -14,6 +14,10 @@
 
 /*Estilos generales*/
 
+body{
+    background-color: #f7eed9 !important;
+}
+
 h1{
     font-family: 'BespokeSans-ExtraboldItalic';
     font-size: 1rem;
@@ -21,7 +25,7 @@ h1{
 }
 
 main{
-    background-color: #f7eed9 !important;
+    /* background-color: #f7eed9 !important; */
     padding: 70px;
 }
 
@@ -207,5 +211,20 @@ h3{
 }
 
 
+/* Estilos footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 24px 0px;
+}
 
-
+.copyright-container p {
+    margin: 0;
+    line-height: 12px;
+    font-size: 0.75rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
