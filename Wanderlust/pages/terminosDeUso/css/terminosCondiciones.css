@@ -1,0 +1,28 @@
+@import url("../../../components/footerLogIn/footer.css");
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+  
+@font-face {
+    font-family: bespoke-sans;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+} 
+h1 {
+    text-align: center ;
+    margin-top: 30px;
+}
+
+
+
+.container{
+    width: 70%;
+    max-width: 18000px;
+    margin: auto;
+    background-color: #f7eed9;
+    border-radius: 1%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+}
+
+
