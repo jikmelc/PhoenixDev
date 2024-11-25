@@ -6,12 +6,13 @@ export async function iniciarSesion(email, password) {
         const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
         if (usuarios) {
+            // Hashear la contraseña ingresada una sola vez
+            const hashedPassword = await hashPassword(password);
+
             // Iterar sobre el array de usuarios
             let usuarioEncontrado = null;
             for (let i = 0; i < usuarios.length; i++) {
                 const usuario = usuarios[i];
-                // Hashear la contraseña ingresada
-                const hashedPassword = await hashPassword(password);
 
                 // Comparar el correo electrónico y la contraseña hasheada
                 if (usuario.userEmail === email && usuario.contraseña === hashedPassword) {
