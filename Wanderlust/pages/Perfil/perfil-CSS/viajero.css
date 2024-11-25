@@ -84,21 +84,21 @@ form select {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 form button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #c2b1a5;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #4a4a4a;
 }
 
 .hidden {
@@ -147,15 +147,15 @@ form input, form textarea, form select {
 form button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #4a4a4a;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #c2b1a5;
 }
 
 
@@ -225,3 +225,7 @@ form button:hover {
     font-weight: bold;
 }
 
+.bd-placeholder-img{
+    width: 110px; 
+    height: 96px;
+}

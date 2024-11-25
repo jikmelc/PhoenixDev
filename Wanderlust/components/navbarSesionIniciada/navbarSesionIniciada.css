@@ -4,7 +4,7 @@
 
 .navbar {
   background-color: #b68c6e !important;
-  height: 140px;
+  height: 100px;
   max-width:none;
   display: flex;
   align-items: center;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: -35px;
 }
 
 .input-container{
@@ -42,6 +43,7 @@ input{
   align-items: center;
   justify-content: space-between;
   margin-right: 55px;
+  margin-top: -35px;
 }
 
 #wander-logo{
