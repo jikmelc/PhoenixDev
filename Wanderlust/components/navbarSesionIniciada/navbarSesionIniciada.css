@@ -4,11 +4,27 @@
 
 .navbar {
   background-color: #b68c6e !important;
-  height: 150px;
+  height: 140px;
   max-width:none;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.log-in-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-container{
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
 }
 
 input{
+  
   border-radius: 25px;
   border-color: #4a4a4a;
   width: 520px;
@@ -17,29 +33,73 @@ input{
   font-size:small;
 }
 
+
+
+
+.logos-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 55px;
+}
+
 #wander-logo{
   height: 150px;
   width: 170px;
-  border-radius: 100px;
   padding-right: 5px;
   padding-top: 10px;
 }
 
-#homelogo{
+#noti-logo{
   height: 50px;
   width: 55px;
-  padding-left: 25px;
+  margin-right: 35px;
 }
 
 #groups-logo{
   height: 50px;
   width: 55px;
+  margin-right: 35px;
 }
 
 #perfil-logo{
   height: 50px;
-  width: 75px;
-  padding-bottom: 0%;
-  padding-right: 25px;
+  width: 55px;
+ 
 }
+
+
+.menu-icon {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-icon:hover .dropdown-menu {
+  display: block;
+}
+
 

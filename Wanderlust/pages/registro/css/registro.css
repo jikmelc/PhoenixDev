@@ -1,5 +1,51 @@
 @import url('../../../components/footerLogIn/footer.css');
 
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+
+@font-face {
+    font-family: bespoke-sans;
+    src: url(../../../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+}
+
+body {
+    background-color: #f7eed9 !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo_imagen {
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+
+#registro {
+    background-color: white;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: auto;
+}
+
 #register {
     background-color: black;
     color: white;
@@ -18,23 +64,6 @@
    justify-content: space-between;
 }
 
-/* Definición de fuentes */
-@font-face {
-    font-family: bespoke-sans-bold;
-    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
-}
-
-@font-face {
-    font-family: bespoke-sans;
-    src: url(../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
-}
-
-body {
-    background-color: #f7eed9 !important;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 .main-content{
   flex: 1;
@@ -42,22 +71,28 @@ body {
 }
 
 /* Títulos y párrafos */
-h2 {
+h1 {
     font-family: "bespoke-sans-bold";
-    font-size: 3rem;
+    font-size: 2.25rem;
+    text-align: center;
+    color: black;
+  }
+
+h2 {
+    font-family: "bespoke-sans-regular";
+    font-size: 1.25rem;
     text-align: center;
     font-weight: bold;
     color: black;
   }
 
-h3 {
-    font-family: "bespoke-sans";
-    font-size: 1.5rem;
-  }
-
-p {
-    font-family: "Inter";
-  }
+p, input, label{
+    font-family: "Manrope";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
 
 
 /* Tablet (810px y menor) */
@@ -73,7 +108,7 @@ p {
         margin: 50px;
     }
 
-    .form1 {
+    form {
         width: 90%;
         padding: 15px;
     }
@@ -85,6 +120,12 @@ p {
     button {
         width: 80%;
     }
+
+    #division_boton {
+        gap: 50px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
 
 /* Móvil (480px y menor) */
@@ -108,6 +149,12 @@ p {
     button {
         width: 90%;
     }
+
+    #division_boton {
+        gap: 15px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
 
 /* Para pantallas muy pequeñas (320px y menor) */
@@ -117,4 +164,10 @@ p {
         height: 150px;
         margin: 15px;
     }
+
+    #division_boton {
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+     }
 }
