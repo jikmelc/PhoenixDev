@@ -144,3 +144,16 @@ footer {
 
 }
   }
+
+  #btn-red-container .btn {
+    background-color: black;
+    color: white;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn-red-container .btn:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Agrega un sombreado */
+    opacity: 0.9; /* Reduce un poco la opacidad */
+}
