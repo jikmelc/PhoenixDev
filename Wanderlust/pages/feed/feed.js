@@ -11,3 +11,16 @@ const autoImages = ["", "", ""];
             autoIndex = (autoIndex + 1) % autoImages.length;
             autoDynamicImage.src = autoImages[autoIndex];
         }, 2000);
+
+
+//Mensajes Busacador
+
+const searchMessage = () => {
+    const val = buscarmensaje.value.toLocaleLowerCase();
+    message.forEach(chat =>{
+        let name = chat.querySelector('h5').textContent.toLocaleLowerCase();
+    
+    })
+}
+
+messageShearch.addEventListener('keyup', searchMessage);

@@ -209,6 +209,7 @@ img{
   border-radius: 1rem;
   padding: 1rem;
   
+  
 
  }
 
@@ -217,17 +218,23 @@ img{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  gap: 50%;
+  
  }
 
- .derecha .mensajes i{
+  .derecha .mensajes i{
   font-size: 1.4rem;
- }
+  width: 100%;
+  max-width: 100%;
+ 
+ } 
 
  .derecha .mensajes .search-bar{
   display: flex;
   background: transparent;
-  width: 30vh;
+ 
   margin-left: 1rem;
+  
   
  }
 
@@ -235,6 +242,9 @@ img{
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  gap: 15px;
  }
 
  .derecha .mensajes .categoria h6{
