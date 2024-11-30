@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../chat/css/chat.css">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../chat/js/chat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@5.0.0/bundles/stomp.umd.js"></script>
+
 </head>
 <body>
 
@@ -32,7 +35,7 @@
 <div class="container">
   <div class="row">
       <!-- Columna izquierda para los chats -->
-      <div id="col-left" class="col-md-4 border-right">
+      <div id="col-left" class="col-md-3">
           <!-- Contenedor de configuración y perfil -->
           <div class="settings-tray d-flex justify-content-between">
             <a href="../Perfil/viajero.html"><img id="perfil-photo" src="../../assets/perfil/EliasPerf.jpg" alt="fotoPerfil"></a>
@@ -113,6 +116,7 @@
       <!-- Columna derecha para el chat actual -->
       <div class="col-md-8">
         <div class="settings-tray">
+
           <div class="friend-drawer friend-drawer--grey d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
               <a href="../Perfil/amigo.html"><img id="perfil-photo" src="../../assets/perfil/JohannesProf.jpg" alt=""></a>
@@ -121,6 +125,7 @@
                 <p class="text-muted">Ultima conexión hace: 00 minutos</p>
               </div>
             </div>
+
             <div class="ms-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -136,8 +141,8 @@
             </div>
           </div>
         </div>
-
-          <div class="chat-panel">
+<!-- ---------------------------------------CHAT -->
+          <div class="chat-panel" id="insertMessages">
               <div class="row">
                   <div class="col-md-3">
                       <div class="chat-bubble chat-bubble--left">
@@ -188,16 +193,17 @@
                   </div>
               </div>
               
-              <div class="row">
-                  <div class="col-12">
-                      <div class="chat-box-tray">
-                          <i class="bi bi-emoji-smile-fill"></i>
-                          <input type="text" placeholder="Type your message here...">
-                          <i class="bi bi-send-fill"></i>
-                      </div>
-                  </div>
-              </div>
+              
           </div>
+          <div class="row">
+            <div class="col-12">
+                <div class="chat-box-tray">
+                    <i class="bi bi-emoji-smile-fill"></i>
+                    <input id="txtMensaje" type="text" placeholder="Type your message here...">
+                    <button class="bi bi-send-fill" id="btnEnviar"></button>
+                </div>
+            </div>
+        </div>
       </div>
   </div>
 </div>
