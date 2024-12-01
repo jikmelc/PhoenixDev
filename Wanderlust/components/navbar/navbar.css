@@ -38,17 +38,34 @@
 {
     background-color: black;
     color: white;
-    width: 200px;
+    width: 100px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
-.btn-container button:hover
+/* .btn-container button:hover
 {
   
+} */
+
+.btn-container a {
+    text-decoration: none; /* Elimina subrayado o decoración del enlace */
 }
 
 .btn-container {
     padding-right: 24px;
-    
+    text-decoration: none;
 }
+
+.btn-container button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    transform: translateY(-2px); /* Levemente levantado */
+    transition: all 0.3s ease; /* Animación suave */
+    background-color: black;
+    color: white;
+}
+
 
 #wanderlust-name {
     font-family: "bespoke-sans-bold";

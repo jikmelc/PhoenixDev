@@ -56,11 +56,11 @@ p {
     font-style: normal;
   }
 
-.btn{
+/* .btn{
     background-color: #d5a86d !important;
     border-color: #b68c6e !important;
-    width: 120px;
-}
+    width: 120px !important;
+} */
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
