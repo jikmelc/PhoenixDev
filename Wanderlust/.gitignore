@@ -1,0 +1,41 @@
+Claro, aquí tienes un archivo .gitignore más completo considerando que usas Gradle:
+
+# Archivos compilados
+*.class
+build/
+bin/
+
+# Archivos de IDE
+.idea/
+*.iml
+.classpath
+.project
+
+# Archivos de configuración específicos del entorno
+local.properties
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+
+# Dependencias
+.gradle/caches/
+.gradle/wrapper/
+
+# Archivos generados por Gradle
+*.jar
+*.war
+*.ear
+
+# Archivos de configuración específicos del usuario
+application-local.properties
+application-local.yml
+
+# Archivos de caché
+**/node_modules/
+
+# Otros archivos que pueden ser ignorados
+*.zip
+*.tar.gz
+*.7z
