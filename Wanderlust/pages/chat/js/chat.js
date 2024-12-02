@@ -42,8 +42,12 @@ const enviarMensaje = () => {
 const mostrarMensaje = (message) => {
     const body = JSON.parse(message);
     const contenedorMensajes = document.getElementById('insertMessages');
-
-    contenedorMensajes.insertAdjacentHTML('beforeend', `
+    const correoSesion=localStorage.getItem("correoSesionIniciada");
+    console.log(correoSesion);
+    
+    if(body.email==correoSesion)
+    {
+        contenedorMensajes.insertAdjacentHTML('beforeend', `
         <div class="row">
           <div class="col-md-3 offset-md-9">
             <div class="chat-bubble chat-bubble--right">
@@ -52,8 +56,22 @@ const mostrarMensaje = (message) => {
           </div>
         </div>
       `);
+    }
+    else
+    {
+        contenedorMensajes.insertAdjacentHTML('beforeend', `
+            <div class="row">
+              <div class="col-md-3">
+                <div class="chat-bubble chat-bubble--left">
+                  <p>${body.content} </p> 
+                </div>
+              </div>
+            </div>
+          `);
+    }
+    
 
-    console.log(body.email);//Para validacion de tipo de bubble
+   // console.log(body.email);//Para validacion de tipo de bubble
 };
 
 document.addEventListener('DOMContentLoaded', () => {
