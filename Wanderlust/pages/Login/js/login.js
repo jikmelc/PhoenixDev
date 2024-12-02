@@ -6,12 +6,13 @@ export async function iniciarSesion(email, password) {
         const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
         if (usuarios) {
+            // Hashear la contraseña ingresada una sola vez
+            const hashedPassword = await hashPassword(password);
+
             // Iterar sobre el array de usuarios
             let usuarioEncontrado = null;
             for (let i = 0; i < usuarios.length; i++) {
                 const usuario = usuarios[i];
-                // Hashear la contraseña ingresada
-                const hashedPassword = await hashPassword(password);
 
                 // Comparar el correo electrónico y la contraseña hasheada
                 if (usuario.userEmail === email && usuario.contraseña === hashedPassword) {
@@ -23,6 +24,7 @@ export async function iniciarSesion(email, password) {
             if (usuarioEncontrado) {
                 console.log('Inicio de sesión exitoso');
                 // Redireccionar a la página principal o mostrar un mensaje de éxito
+                localStorage.setItem('correoSesionIniciada', email);
                 window.location.href = '/pages/feed/feed.html';
             } else {
                 alert('Correo electrónico o contraseña incorrectos');

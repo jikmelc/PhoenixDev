@@ -4,8 +4,9 @@
 
 .navbar {
   background-color: #b68c6e !important;
-  height: 140px;
+  height: 100px;
   max-width:none;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
   
@@ -15,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: -35px;
 }
 
 .input-container{
@@ -41,6 +43,7 @@ input{
   align-items: center;
   justify-content: space-between;
   margin-right: 55px;
+  margin-top: -35px;
 }
 
 #wander-logo{
@@ -65,7 +68,7 @@ input{
 #perfil-logo{
   height: 50px;
   width: 55px;
- 
+  margin-right: 45px;
 }
 
 
@@ -75,12 +78,17 @@ input{
 }
 
 
+
+
 .dropdown-menu {
   display: none;
   position: absolute;
+  top: 100%;
+  left: -130px;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-radius: 30px;
 }
 
 .dropdown-menu li {
@@ -95,7 +103,8 @@ input{
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f1f1f1;
+  background-color: #c2b1a5;
+  border-radius: 20px;
 }
 
 .menu-icon:hover .dropdown-menu {

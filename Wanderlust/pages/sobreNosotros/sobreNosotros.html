@@ -11,18 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/sobreNosotros.css">
-  <link rel="stylesheet" href="../../components/navbar/navbar.css">
+  <link rel="stylesheet" href="css/sobreNosotros.css"> 
   <title>Sobre Nosotros</title>
 </head>
 <body class="vh-100" data-spy="scroll">
-  <header>
-  <div id="navbar-container"></div> 
+  <header id="navbar">
+    <nav class="navbar navbar-expand-sm  navbar-container navbar-dark "></nav>
   <script>
     fetch("../../components/navbar/navbar.html")
       .then(response => response.text())
       .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
+        document.querySelector('.navbar-container').innerHTML = html;
       });
   </script>
   </header>
@@ -91,7 +90,7 @@
                 <img src="/../../assets/images/sobreNosotros/Alexis.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Alexis Piña Miranda</h5>
-                  <p class="card-text">Desarrollador Java Fullstack Jr especializado en el desarrollo de aplicaciones web orientadas a optimizar procesos de negocio. Apasionado por mejorar la experiencia del usuario, contribuyendo en todas las fases del desarrollo.</p>
+                  <p class="card-text">Desarrollador Java Fullstack Jr especializado en optimizar procesos de negocio a través de aplicaciones web, con enfoque en mejorar la experiencia del usuario en todas las fases del desarrollo.</p>
                 </div>
               </div>
               
@@ -101,7 +100,7 @@
                 <img src="/../../assets/images/sobreNosotros/Jikme.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Ángel Jikmé López Cruz</h5>
-                  <p class="card-text">Desarrollador Full-Stack Java especializado en desarrollo web, capaz de crear soluciones completas, desde la interfaz de usuario hasta la lógica del servidor y el manejo de bases de datos.</p>
+                  <p class="card-text">Desarrollador Full-Stack Java experto en crear soluciones completas, integrando desde la interfaz de usuario hasta la lógica del servidor y las bases de datos.</p>
                 </div>
               </div>
             </div>
@@ -116,7 +115,7 @@
                 <img src="/../../assets/images/sobreNosotros/Carlos.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Carlos García Espinosa</h5>
-                  <p class="card-text">Ingeniero en sistemas computacionales, apasionado por el desarrollo de software y la innovación tecnologica.</p>
+                  <p class="card-text">Ingeniero en sistemas computacionales, apasionado por el desarrollo de software y la innovación tecnológica, buscando soluciones que impulsen el progreso digital.</p>
                 </div>
               </div>
             </div>
@@ -125,7 +124,7 @@
                 <img src="/../../assets/images/sobreNosotros/German.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Germán Alvarez Santabárbara</h5>
-                  <p class="card-text">Desarrollador web apasionado por la programación. Busco aplicar mi creatividad y capacidad analítica para resolver problemas y contribuir a proyectos innovadores en el ámbito digital.</p>
+                  <p class="card-text">Desarrollador web creativo, enfocado en aplicar mi capacidad analítica y creatividad para resolver problemas y contribuir a proyectos digitales innovadores.</p>
                 </div>
               </div>
             </div>
@@ -141,7 +140,7 @@
                 <img src="/../../assets/images/sobreNosotros/Felipe.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Jose Antonio De Felipe Vargas</h5>
-                  <p class="card-text">Desarrollador versatil y con gran capacidad para trabajar en todas las capas de la aplicación lo convierten en una pieza clave del equipo abordando cualquier desafío técnico.</p>
+                  <p class="card-text">Desarrollador versátil, con habilidades para trabajar en todas las capas de una aplicación, aportando soluciones efectivas y superando desafíos técnicos.</p>
                 </div>
               </div>
             </div>
@@ -151,7 +150,7 @@
                 <img src="/../../assets/images/sobreNosotros/Paulina.png" class="card-img-left" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paulina Guadalupe Herrera Sánchez</h5>
-                  <p class="card-text">Desarrolladora web creativa con habilidades en HTML, CSS, Bootstrap, Java y JavaScript. Me enfoco en crear experiencias de usuario excepcionales a través de interfaces atractivas y funcionales.</p>
+                  <p class="card-text">Desarrolladora web creativa, experta en HTML, CSS, Bootstrap, Java y JavaScript, enfocada en crear interfaces funcionales y experiencias de usuario excepcionales.</p>
                 </div>
               </div>
             </div>
