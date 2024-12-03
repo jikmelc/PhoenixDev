@@ -36,13 +36,13 @@
 }
 .btn
 {
-    background-color: black;
+    background-color: #4a4a4a;
     color: white;
-    width: 100px;
     font-size: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: medium;
 } 
 /* .btn-container button:hover
 {
@@ -62,7 +62,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
     transform: translateY(-2px); /* Levemente levantado */
     transition: all 0.3s ease; /* Animación suave */
-    background-color: black;
+    background-color: #b68c6e;
     color: white;
 }
 
