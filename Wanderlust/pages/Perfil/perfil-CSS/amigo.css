@@ -233,3 +233,149 @@ footer{
     font-weight: 200;
     font-style: normal;
 }
+
+/*Newcard*/
+.container{
+    position: relative;
+    background-color: white;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.top_data{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.top_data svg{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.top_data svg path{
+    fill: #000;
+}
+
+.profile_name{
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+
+.time{
+    font-size: 12px;
+    color: #919191;
+}
+
+.post_description{
+    width: 100%;
+    padding: 0px 10px 10px 60px;
+    font-size: 15px;
+    color: #000;
+}
+
+.post{
+    width: 100%;
+    display: flex;
+    padding: 0px 10px 10px 10px;
+}
+
+.options{
+    width: 44px;
+    padding: 0px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.number{
+    font-size: 11px;
+}
+
+.img_post{
+    cursor: pointer;
+    width: calc(100% - 44px);
+    border-radius: 10px;
+}
+
+.heart_icon{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 40%;
+    fill: #e010b3;
+    display: none;
+    opacity: 0;
+    animation: heart 2s ease;
+}
+
+.likes, .coments, .save{
+    text-align: center;
+}
+
+.likes .active_icon{
+    fill: #e010b3;
+}
+
+.active_icon{
+    display: none;
+}
+
+.active{
+    display: inline-block;
+}
+
+svg:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all .3s ease;
+}
+
+@keyframes heart {
+    0%{
+        opacity: 0;
+        top: 100%;
+        left: 40%;
+    }
+
+    50%{
+        opacity: 1;
+        top: 50%;
+        left: 40%;
+    }
+
+    75%{
+        opacity: 1;
+        top: 50%;
+        left: 40%;
+        transform: scale(1.2) rotateY(180deg);
+    }
+
+    100%{
+        opacity: 1;
+        top: 50%;
+        left: 40%;
+        transform: scale(1.2) rotateY(180deg);
+        opacity: 0;
+    }
+}

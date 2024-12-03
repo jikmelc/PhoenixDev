@@ -19,10 +19,11 @@
 
 #open-form-btn {
     margin-bottom: 15px;
+    transition: box-shadow 0.6s ;
 }
 
 #open-form-btn:hover {
-    transform: scale(1.1);
+    
     box-shadow: 0 0 15px #4a4a4a;
 }
 
@@ -145,6 +146,7 @@ form input, form textarea, form select {
 }
 
 form button {
+    font-weight: bold;
     width: 100%;
     padding: 10px;
     background-color: #4a4a4a;
@@ -152,10 +154,12 @@ form button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: background-color 0.6s;
 }
 
 form button:hover {
     background-color: #c2b1a5;
+    color: black;
 }
 
 

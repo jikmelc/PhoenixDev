@@ -1,159 +1,131 @@
 @import url("../../../components/footerLogIn/footer.css");
-@font-face {
-    font-family: bespoke-sans-bold;
-    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
-}
-  
-@font-face {
-    font-family: bespoke-sans;
-    src: url(/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+@import url("../../Perfil/perfil-CSS/bespoke-sans.css");
+
+
+
+/*color claro #f7eed9
+/*color crema #c2b1a5
+/*color intermedio #b68c6e
+/*color tipo dorado #d5a86d
+/*color oscuro #4a4a4a*/
+
+
+/*Parte de arriba*/
+body{
+    background-color: #f7eed9 !important;
+
 }
 
-body 
-{   
-    background-color: #f7eed9 ;
-   
-    text-align: center;
-    margin: 0;
-    display: flex;
-    min-height: auto;
-    transition: background-image 4s linear; 
-    background-size:cover;
-    background-repeat: no-repeat;
-    min-width: auto;
-  
-}
-#btn-red-container
-{
-    width:100%;
-}
-#btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
-    margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
-    margin-left:10vw ;
-}
-article
-{   
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 2%;
-    gap: 55px;
-    width: 60vw;
-    font-family: bespoke-sans;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    text-align: left;
-    color:white;
-    background-color: rgba(0, 0, 0, 0.4);
+.contenty:hover{
+    background-color: #b68c6e;
+    transition: background-color 0.5s;
+    
 }
 
-aside
-{
-    width: 45vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: auto;
-}
-aside img
-{
-    
-    padding: 2%;
-    margin-bottom: 15%;
-    width: 100%; /* Ajustar el ancho al 100% del contenedor */
-    height: auto; 
-  
-}
-h1
-{
-    font-size: 7rem;
-    text-shadow: 2px 2px 4px black;
-  
-}
-h4
-{
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px black;
-    
-}
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white; 
-    text-align: center; 
-    padding:20px; 
-    position: fixed;
-    bottom: 0;
-    width: 100%; 
-    
-  }
 
-  #register {
-    background-color: black;
+.header{
+    background-image: url(../assets/hiker-918473.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0%;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: none;
+    position: absolute;
+    
+}
+
+.Logo-wander{
+    width: 50px;
+}
+
+.link-custom{
+    font-weight: 600;
+    text-decoration: none;
     color: white;
-    width: 200px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 850px) {
-    body {
-     flex-direction: column-reverse;
-     
-      overflow-y:hidden;
-      overflow-x: scroll;
-     
-    }
-  
-    article{
-      width: 100%; /* Los elementos ocupan todo el ancho */
-      padding: 0%; /* Ajustar el padding */
-      gap: 50px;
-      justify-content:start;
-      text-align: center;
-      min-width: 500px; 
-      
-    }
-    #btn-red-container .btn:first-child { /* Selecciona el primer botón dentro del contenedor */
-        margin-right: 10vw; /* Ajusta el valor (20px) según el espacio que desees */
-        margin-left:0vw ;
-    }
-    aside{
-        width:100%; /* Los elementos ocupan todo el ancho */
-        padding: 0%; /* Ajustar el padding */
-        height: 30vh;
-        min-width: 500px; 
-      }
-  
-    h1 {
-      font-size: 3rem; /* Ajustar tamaño de fuente */
-    }
-  
-    h4 {
-      font-size: 1.5rem; /* Ajustar tamaño de fuente */
-    }
-    aside img
-{
-    padding: 10%;
-    margin-bottom: 0%;
-    min-width: 500px; /* Ajustar el ancho al 100% del contenedor */
-    height: auto; 
-    transform: scale(.6);
-
+.link-custom:hover{
+    color: #4a4a4a;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
-  }
 
-  #btn-red-container .btn {
-    background-color: black;
+.description-container{
     color: white;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#btn-red-container .btn:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Agrega un sombreado */
-    opacity: 0.9; /* Reduce un poco la opacidad */
+
+.span-style{
+    font-weight: 700;
+}
+
+.prominent-style{
+    color: black;
+}
+
+#atractive-style{
+    line-height: 3.0;
+}
+
+.img-fluid{
+    margin-top: 200px;
+}
+
+
+/* contenido*/
+
+#text-descr{
+    line-height: 2.0;
+}
+
+.card-img{
+    filter: brightness(50%);
+    height: 550px;
+    width: 180px;
+}
+
+.link-customer{
+    font-weight: 600;
+    text-decoration: none;
+    
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.link-customer:hover{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px #b68c6e;
+    transition: background-color 0.5s;
+}
+
+/* Comentario*/
+
+.comments{
+    background-image: url(../assets/mountains-7427724_1280.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.comments__img{
+    --tamano: 80px;
+    width: var(--tamano);
+    height: var(--tamano);
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 7px 7px 7px black;
+    border: 3px solid white;
+}
+
+.transform-turn{
+    transform: rotate(180deg);
 }
