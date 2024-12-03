@@ -56,11 +56,25 @@ p {
     font-style: normal;
   }
 
-/* .btn{
-    background-color: #d5a86d !important;
-    border-color: #b68c6e !important;
-    width: 120px !important;
-} */
+  .btn-send {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    transition: background-color 0.4s;
+}
+
+
+.btn-send:hover {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    background-color: #d5a86d;
+    color: black;
+    
+}
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {

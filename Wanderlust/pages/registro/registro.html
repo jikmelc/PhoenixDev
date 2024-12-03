@@ -36,24 +36,31 @@
                 <h1>Crea tu cuenta</h1>
                 <h2>Completa los campos con tus datos</h2>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-floating mb-3" id="campoDeNombres">
                     <input type="text" class="form-control" id="nombreUsuario" name="nombres" required>
-                    <label for="nombreUsuario" class="form-label">Nombre(s)</label>
+                    <label for="nombreUsuario" class="form-label">Nombre(s)*</label>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-floating mb-3" id="campoDeApellidos">
                     <input type="text" class="form-control" id="apellidoUsuario" name="apellidos" required>
-                    <label for="apellidoUsuario" class="form-label">Apellido(s)</label>
+                    <label for="apellidoUsuario" class="form-label">Apellido(s)*</label>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-floating mb-3" id="campoDeUsername">
+                    <input type="text" class="form-control" id="usernameUsuario" name="username" required>
+                    <label for="usernameUsuario" class="form-label">Nombre de usuario *</label>
                 </div>
             </div>
 
 
             <div class="col-md-9"> 
                 <div id="campoDeFechaDeNacimiento">
-                    <label class="form-label">Fecha de nacimiento</label>
+                    <label class="form-label">Fecha de nacimiento*</label>
                     <div class="row">
     
                         <div class="col-md-4">
@@ -94,7 +101,7 @@
                 </div>
 
             <div class="col-md-3" id="campoGenero">
-                <label class="form-label" for="generoUsuario">Género</label>
+                <label class="form-label" for="generoUsuario">Género*</label>
                 <select class="form-select" name="genero" id="generoUsuario">
                     <option selected value="">Seleccionar</option>
                     <option value="F">Femenino</option>
@@ -107,7 +114,7 @@
             <div class="col-md-6">
                 <div class="form-floating mb-3" id="campoDeEmail">
                     <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" name="userEmail" required>
-                    <label for="inputEmail" class="form-label">Correo electrónico</label>
+                    <label for="inputEmail" class="form-label">Correo electrónico*</label>
                     <small id="inputEmailHelp" class="form-text text-muted">Ejemplo: usuario@dominio.com</small>
                 </div>
             </div>
@@ -115,14 +122,14 @@
             <div class="col-md-6">
                 <div class="form-floating mb-3" id="campoDeTelefono">
                     <input type="tel" class="form-control" id="inputPhone" placeholder="Ejemplo: +52 " name="userPhone" required>
-                    <label for="inputPhone" class="form-label">Número de teléfono</label>
+                    <label for="inputPhone" class="form-label">Número de teléfono*</label>
                     <small id="inputPhoneHelp" class="form-text text-muted">Ejemplo: +52 551909890</small>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div id="campoDeContraseña">
-                    <label for="contraseñaUsuario" class="form-label">Contraseña</label>
+                    <label for="contraseñaUsuario" class="form-label">Contraseña*</label>
                     <input type="password" class="form-control" id="contraseñaUsuario" name="contraseña">
                     <small id="contraseñaAyuda" class="form-text text-muted">La contraseña debe contener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y un carácter especial.</small>
                 </div>
