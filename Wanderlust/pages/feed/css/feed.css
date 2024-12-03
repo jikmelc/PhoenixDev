@@ -141,13 +141,12 @@ img{
   }
 
   .medio .head .user .perfil{
-    border-radius: 100%;
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
   }
-  #perfil1{
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-  }
+  
 
   .medio .botones-accion{
     display: flex;
@@ -201,41 +200,41 @@ img{
   position: sticky;
   top: -18rem;
   bottom: 0;
-  gap: 3rem;
+  
  }
 
  .derecha .mensajes{
   background-color: white;
   border-radius: 1rem;
-  padding: 1rem;
+   padding: 1rem; 
   
-  
-
  }
 
  .derecha .mensajes .heading{
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
   margin-bottom: 1rem;
-  gap: 50%;
+   gap: 50%; 
   
  }
 
   .derecha .mensajes i{
-  font-size: 1.4rem;
-  width: 100%;
-  max-width: 100%;
+  font-size: 1.2rem;
  
  } 
 
  .derecha .mensajes .search-bar{
   display: flex;
-  background: transparent;
- 
-  margin-left: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background:rgb(206, 185, 185);
+  margin-bottom: 1rem;
   
-  
+  width: 100%;
+  padding: 0.6rem 1rem;
+
  }
 
  .derecha .mensajes .categoria{
@@ -307,16 +306,19 @@ background-color: white;
 padding: 1rem;
 border-radius: 1rem;
 margin-bottom: 0.7rem;
+
  }
  
  .derecha .solicitudes .info{
+
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  justify-content: space-between;
+  
  }
 
  
-
  .derecha .solicitudes .acciones-solicitud{
   display: flex;
   gap: 1rem;

@@ -14,13 +14,21 @@ const autoImages = ["", "", ""];
 
 
 //Mensajes Busacador
+const messages = document.querySelector('.mensajes')
+ const message = messages.querySelectorAll('.mensaje');
+const messageSearch = document.querySelector('#buscarmensaje');
 
 const searchMessage = () => {
-    const val = buscarmensaje.value.toLocaleLowerCase();
-    message.forEach(chat =>{
-        let name = chat.querySelector('h5').textContent.toLocaleLowerCase();
-    
+    const val = messageSearch.value.toLowerCase();
+    console.log(val);
+    message.forEach(user => {
+        let name = user.querySelector('h5').textContent.toLowerCase();
+        if (name.indexOf(val) != -1) {
+            user.style.display = 'flex';
+        }else{
+            user.style.display = 'none';
+        }
     })
 }
 
-messageShearch.addEventListener('keyup', searchMessage);
+messageSearch.addEventListener('keyup', searchMessage);
