@@ -27,6 +27,7 @@ export async function registrarUsuario(userData) {
             localStorage.setItem('usuarios', JSON.stringify(usuariosExistentes));
 
             alert('Usuario registrado con éxito.', userData);
+            localStorage.setItem('correoSesionIniciada', userData.userEmail);
             window.location.href = '/pages/feed/feed.html'; 
         }
 
