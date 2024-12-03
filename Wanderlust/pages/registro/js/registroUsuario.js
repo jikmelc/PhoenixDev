@@ -1,5 +1,5 @@
 // registroUsuario.js
- export async function hashPassword(password) {
+export async function hashPassword(password) {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -10,32 +10,54 @@
 }
 // registroUsuario.js
 export async function registrarUsuario(userData) {
-    try {   
-        const usuariosExistentes = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const alreadyRegistered = usuariosExistentes.some(usuario => usuario.userEmail === userData.userEmail);
+    try {
+        // URL del endpoint
+        const url = `http://localhost:8080/api/v1`;
 
-        if (alreadyRegistered) {
-            alert("El correo que intenta ingresar ya esta registrado.");
-            console.log("Error de correo.");
-        } else {
-            // Hashear la contraseña del usuario 
-            userData.contraseña = await hashPassword(userData.contraseña);
+        // Datos que se van a mandar al back
+        const nombre = userData.nombres;
+        const apellido = userData.apellidos;
+        const userName = userData.username;
+        const fechaNacimiento = convertirAFechaISO(userData.año, userData.mes, userData.dia);
+        const gender = userData.genero;
+        const correo = userData.userEmail;
+        const telefono = userData.userPhone;
+        const password = userData.contraseña;
 
-            usuariosExistentes.push(userData);
-
-            // Guardar los datos del usuario en el Local Storage
-            localStorage.setItem('usuarios', JSON.stringify(usuariosExistentes));
-
-            alert('Usuario registrado con éxito.', userData);
-            localStorage.setItem('correoSesionIniciada', userData.userEmail);
-            localStorage.setItem('nombreUsuario', userData.nombres);
-            window.location.href = '/pages/feed/feed.html'; 
+        const user = {
+            nombres: nombre,
+            apellidos: apellido,
+            nombreUsuario: userName,
+            fechaDeNacimiento: fechaNacimiento,
+            genero: gender,
+            email: correo,
+            contraseña: password
         }
 
+        // Enviar los datos al backend
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user)
+        });
+
+        // Verificar la respuesta del servidor
+        if (response.ok) {
+            const responseData = await response.json();
+            console.log('Usuario registrado en backend:', responseData);
+            alert('Usuario registrado con éxito.');
+            // Redirigir después del registro exitoso
+            window.location.href = '/pages/feed/feed.html';
+        } else {
+            console.error('Error al guardar en backend:', response.statusText);
+            alert('Error al registrar usuario en el backend.');
+        }
     } catch (error) {
         console.error('Error al registrar el usuario:', error);
-    }
+        alert('Ocurrió un error al intentar registrar el usuario.');
+    } 
 }
+
 async function precargarAdmin() {
     try {
         const usuariosExistentes = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -67,3 +89,18 @@ async function precargarAdmin() {
     }
 }
 precargarAdmin();
+
+function convertirAFechaISO(año, mes, día) {
+    // Función para rellenar con ceros
+    const pad = (num, size) => num.toString().padStart(size, '0');
+
+    // Asegurar que mes y día tienen dos dígitos
+    const year = pad(año, 4);
+    const month = pad(mes, 2);
+    const day = pad(día, 2);
+
+    // Crear el string con la hora, minutos, segundos y milisegundos en ceros
+    const isoString = `${year}-${month}-${day}T00:00:00.000000`;
+
+    return isoString;
+}
