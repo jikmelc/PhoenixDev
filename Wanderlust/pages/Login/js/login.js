@@ -25,7 +25,7 @@ export async function iniciarSesion(email, password) {
                 console.log('Inicio de sesión exitoso');
                 // Redireccionar a la página principal o mostrar un mensaje de éxito
                 localStorage.setItem('correoSesionIniciada', email);
-                
+                localStorage.setItem('nombreUsuario', usuarioEncontrado.nombres)
                 window.location.href = '/pages/feed/feed.html';
             } else {
                 alert('Correo electrónico o contraseña incorrectos');

@@ -28,6 +28,7 @@ export async function registrarUsuario(userData) {
 
             alert('Usuario registrado con éxito.', userData);
             localStorage.setItem('correoSesionIniciada', userData.userEmail);
+            localStorage.setItem('nombreUsuario', userData.nombres);
             window.location.href = '/pages/feed/feed.html'; 
         }
 

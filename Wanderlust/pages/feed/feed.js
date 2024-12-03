@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function showPublicaciones() {
     const Publicaciones = localStorage.getItem('publicaciones');
+    const nombreUsuario = localStorage.getItem('nombreUsuario')
     let publicacionesArray = [];
   
     if (Publicaciones) {
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <img src="../../assets/images/feed/foto_perfil2.jpg" alt="" id="perfil1">
                 </div>
                 <div class="info">
-                  <h3>${publicacion.titulo}</h3>
+                  <h3>${nombreUsuario}</h3>
                   <small>Publicado hace 20 minutos</small>
                 </div>
               </div>
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>Liked by <b>Axel Ortiz</b> and <b>2,345 others</b></p>
             </div>
             <div class="caption">
-              <p><b>Joshep</b> ${publicacion.contenido}</p>
+              <p><b>${publicacion.titulo}</b> ${publicacion.contenido}</p>
             </div>
             <div class="comment text-muted">
               View all 323 comments
