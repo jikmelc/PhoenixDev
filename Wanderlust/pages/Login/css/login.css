@@ -127,6 +127,16 @@ input, label{
     
 }
 
+#contraseña {
+    display: flex;
+    flex-direction: column;
+}
+
+#correoElectronico {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Tablet (810px y menor) */
 @media screen and (max-width: 810px) {
