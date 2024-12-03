@@ -1,0 +1,44 @@
+@import url("../../../components/footerLogIn/footer.css");
+@import url('../../../components/navbar/navbar.css');
+
+@font-face {
+    font-family: bespoke-sans-bold;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf);
+}
+  
+@font-face {
+    font-family: bespoke-sans;
+    src: url(/Wanderlust/assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf);
+} 
+h1 {
+    text-align: center ;
+    margin-top: 30px;
+}
+
+body {
+    background-color: #f7eed9;
+}
+
+.container{
+    width: 70%;
+    max-width: 18000px;
+    margin: auto;
+    background-color: #f7eed9;
+    border-radius: 1%;
+    /* box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 24px;
+}
+
+#contacto {
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+#contacto:hover{
+    text-decoration: underline;
+    color: #b68c6e;
+}

@@ -1,0 +1,178 @@
+@import url('../../../components/footerLogIn/footer.css');
+@import url('../../../components/navbar/navbar.css');
+
+/* Definición de fuentes */
+@font-face 
+{
+  font-family: bespoke-sans-bold;
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf');
+}
+@font-face 
+{
+  font-family: bespoke-sans;
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Regular.otf');
+}
+body 
+{
+  background-color: #f7eed9 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us 
+{
+  background-color:  #f7eed9;
+  padding-bottom: 10px; /* Ajuste para mayor espaciado */
+  display: grid;
+}
+
+h1 {
+  font-family: "bespoke-sans-bold";
+  font-size: 3rem;
+  /* text-align: center; */
+  color: black;
+}
+
+/* Títulos y párrafos */
+h2 {
+  font-family: "bespoke-sans-bold";
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card img{
+  width: 200px; /* Tamaño de imagen fijo */
+  height: auto;
+  margin: 10px;
+}
+
+/* Efecto de hover para la card */
+.card:hover {
+  background-color: #d5a86d; /* Color de fondo al hacer hover (puedes cambiarlo) */
+  color: #fff; /* Cambiar color del texto */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la card */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño de la card */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Opcional: Cambiar color de las etiquetas <span> dentro del texto */
+.card:hover .card-text span {
+  font-weight: bold; /* Cambiar color de las palabras resaltadas */
+  color: #4a4a4a;
+}
+
+.card:hover .card-title {
+  font-weight: bold; /* Cambiar color de las palabras resaltadas */
+  color: #4a4a4a;
+}
+
+/* Opción adicional para mejorar la visibilidad de los textos */
+/* .card-body {
+  transition: all 0.3s ease-in-out;
+} */
+
+
+h5 {
+  font-family: "bespoke-sans";
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p 
+{
+  font-family: "Inter";
+  font-size: 1.5rem;
+ 
+}
+
+span{
+  font-family: "Inter";
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+}
+
+.subtitle {
+  margin-top: 25px;
+}
+/* Estilos para las cartas */
+
+.card-member 
+{
+  /* margin-bottom: 20px; */
+  display: flex;
+  align-items: center;
+}
+.card-member img 
+{
+  width: 150px; /* Tamaño de imagen fijo */
+  height: auto;
+  margin-top: 25px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.card-member h5{
+  font-family: "bespoke-sans";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-member p{
+  font-family: "Inter";
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Carrusel */
+
+.carousel-inner {
+  margin: 20px;
+  padding: 25px;
+}
+
+.imagenizquierda
+{
+  display: flex;
+  justify-content: flex-end;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  padding: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) 
+{
+  .navbar-nav 
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .d-flex 
+  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card-member 
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-member img 
+  {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
