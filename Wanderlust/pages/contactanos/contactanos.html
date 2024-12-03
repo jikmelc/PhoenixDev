@@ -33,15 +33,15 @@
         <h1 class="text-center">Contáctanos</h1>
         <form novalidate>
             <!-- Nombre del usuario que quiere contactarnos -->
-            <div class="form-floating mb-3" id="nameField">
-                <input type="text" class="form-control" id="inputName" placeholder="Ingresa tu nombre" name="userName" required>
+            <div class="form-floating mb-3 " id="nameField">
+                <input type="text" class="form-control rounded-4 border-dark" id="inputName" placeholder="Ingresa tu nombre" name="userName" required>
                 <label for="inputName" class="form-label">Nombre</label>
             </div>
             <div class="row">
                 <!-- Correo electrónico del usuario que desea contactarnos -->
                 <div class="col-md-6">
                     <div class="form-floating mb-3" id="emailField">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu correo electrónico" name="userEmail" required>
+                        <input type="email" class="form-control rounded-4 border-dark" id="inputEmail" placeholder="Ingresa tu correo electrónico" name="userEmail" required>
                         <label for="inputEmail" class="form-label">Correo electrónico</label>
                         <small id="inputEmailHelp" class="form-text text-muted">Ejemplo: usuario@dominio.com</small>
                     </div>
@@ -49,18 +49,18 @@
                 <!-- Número telefónico del usuario que desea contactarnos -->
                 <div class="col-md-6">
                     <div class="form-floating mb-3" id="phoneField">
-                        <input type="tel" class="form-control" id="inputPhone" placeholder="Ejemplo: +52 " name="userPhone" required>
+                        <input type="tel" class="form-control rounded-4 border-dark" id="inputPhone" placeholder="Ejemplo: +52 " name="userPhone" required>
                         <label for="inputPhone" class="form-label">Número de teléfono</label>
                         <small id="inputPhoneHelp" class="form-text text-muted">Ejemplo: +52 551909890</small>
                     </div>
                 </div>
             </div>
             <div class="form-floating mb-3" id="messageField">
-                <textarea class="form-control" id="inputMessage" placeholder="Escribe tu mensaje aquí..." style="height: 100px;" name="userMessage" required></textarea>
+                <textarea class="form-control rounded-4 border-dark" id="inputMessage" placeholder="Escribe tu mensaje aquí..." style="height: 100px;" name="userMessage" required></textarea>
                 <label for="inputMessage">Mensaje</label>
             </div>
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn-send p-2 rounded-pill">Enviar</button>
             </div> 
         </form>
     </main>
