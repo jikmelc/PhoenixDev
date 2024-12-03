@@ -8,7 +8,7 @@ const autoImages = ["https://cdn.forbes.com.mx/2020/10/shutterstock_1206167314-r
         // Cambiar imagen automáticamente cada 2 segundos
         setInterval(() => {
             autoIndex = (autoIndex + 1) % autoImages.length;
-          //  autoDynamicImage.src = autoImages[autoIndex];
+            //autoDynamicImage.src = autoImages[autoIndex];
         }, 2000);
 
 
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //====================================================================================
   //======================================fin publicaciones
-});//FinDOM
+
 
 //Likes de publicaciones
 const btnLike = document.querySelector('.like_icon');
@@ -305,3 +305,4 @@ saveActive.addEventListener('click', () => {
 });
 
 //============================================================== publicar desde feed
+});//FinDOM
