@@ -14,6 +14,10 @@ const autoImages = ["", "", ""];
 
 
 //Mensajes Busacador
+const messages = document.querySelector('.mensajes')
+ const message = messages.querySelectorAll('.mensaje');
+const messageSearch = document.querySelector('#buscarmensaje');
+
 
 //const searchMessage = () => {
 //    const val = buscarmensaje.value.toLocaleLowerCase();
@@ -117,3 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     contenedorPublicaciones.innerHTML += publicacionesHTML;
   }
+
+const searchMessage = () => {
+    const val = messageSearch.value.toLowerCase();
+    console.log(val);
+    message.forEach(user => {
+        let name = user.querySelector('h5').textContent.toLowerCase();
+        if (name.indexOf(val) != -1) {
+            user.style.display = 'flex';
+        }else{
+            user.style.display = 'none';
+        }
+    })
+}
+
+messageSearch.addEventListener('keyup', searchMessage);
+
