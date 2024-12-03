@@ -1,0 +1,131 @@
+@import url("../../../components/footerLogIn/footer.css");
+@import url("../../Perfil/perfil-CSS/bespoke-sans.css");
+
+
+
+/*color claro #f7eed9
+/*color crema #c2b1a5
+/*color intermedio #b68c6e
+/*color tipo dorado #d5a86d
+/*color oscuro #4a4a4a*/
+
+
+/*Parte de arriba*/
+body{
+    background-color: #f7eed9 !important;
+
+}
+
+.contenty:hover{
+    background-color: #b68c6e;
+    transition: background-color 0.5s;
+    
+}
+
+
+.header{
+    background-image: url(../assets/hiker-918473.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0%;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: none;
+    position: absolute;
+    
+}
+
+.Logo-wander{
+    width: 50px;
+}
+
+.link-custom{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.link-custom:hover{
+    color: #4a4a4a;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.description-container{
+    color: white;
+}
+
+
+.span-style{
+    font-weight: 700;
+}
+
+.prominent-style{
+    color: black;
+}
+
+#atractive-style{
+    line-height: 3.0;
+}
+
+.img-fluid{
+    margin-top: 200px;
+}
+
+
+/* contenido*/
+
+#text-descr{
+    line-height: 2.0;
+}
+
+.card-img{
+    filter: brightness(50%);
+    height: 550px;
+    width: 180px;
+}
+
+.link-customer{
+    font-weight: 600;
+    text-decoration: none;
+    
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.link-customer:hover{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px #b68c6e;
+    transition: background-color 0.5s;
+}
+
+/* Comentario*/
+
+.comments{
+    background-image: url(../assets/mountains-7427724_1280.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.comments__img{
+    --tamano: 80px;
+    width: var(--tamano);
+    height: var(--tamano);
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 7px 7px 7px black;
+    border: 3px solid white;
+}
+
+.transform-turn{
+    transform: rotate(180deg);
+}
