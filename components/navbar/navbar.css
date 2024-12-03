@@ -1,0 +1,83 @@
+@font-face 
+{
+  font-family: bespoke-sans-bold;
+  src: url('../../../assets/fonts/BespokeSans_Complete/Fonts/OTF/BespokeSans-Bold.otf');
+}
+
+/* header {
+    position: relative;
+    width: 100%;
+} */
+
+.navbar-container {  
+    padding: 5px 20px 5px 20px;
+    background-color: #f7eed9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);   
+}
+
+
+.navbar-logo img
+{
+    height: 100px;
+    padding-left: 24px;
+}
+
+.navbar
+{
+    min-height: 10vh;
+    position: relative;
+    width: 100%;
+}
+.btn
+{
+    background-color: black;
+    color: white;
+    width: 100px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+/* .btn-container button:hover
+{
+  
+} */
+
+.btn-container a {
+    text-decoration: none; /* Elimina subrayado o decoración del enlace */
+}
+
+.btn-container {
+    padding-right: 24px;
+    text-decoration: none;
+}
+
+.btn-container button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    transform: translateY(-2px); /* Levemente levantado */
+    transition: all 0.3s ease; /* Animación suave */
+    background-color: black;
+    color: white;
+}
+
+
+#wanderlust-name {
+    font-family: "bespoke-sans-bold";
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+.navbar-title {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+  }

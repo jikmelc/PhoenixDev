@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Perfil/perfil-CSS/viajero.css">
+    <link rel="stylesheet" media="(max-width: 480px)" href="perfil-CSS/movil.css"> 
+    <!-- <link rel="stylesheet" href="../../../components/footerLogIn/footer.css"> -->
+    <script defer src="../Perfil/perfil-Js/viajero.js"></script>
+    
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    
+</head>
+<body>
+    
+  <header>
+    <div id="navbar-container"></div> 
+    <script>
+        fetch("../../components/navbarSesionIniciada/navbarSesionIniciada.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML =html;
+        });
+    </script>
+  </header>
+    
+  <main>
+         
+<!-- Aquí empieza el título de las publicaciones y caja de publicaciones -->
+    <div class="row g-5">
+      <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom border-dark ">
+        Mis tickets 
+      </h3>
+
+      <div class="iconoPublicacion" id="feed">
+        <button id="open-form-btn" class="compact-form">¿Qué estás pensando?</button>
+      </div>
+
+      <div id="post-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-form-btn" class="close">&times;</span>
+            <h2>Crear Publicación</h2>
+            <form id="post-form">
+                <label for="post-type">Tipo de publicación:</label>
+                <select id="post-type">
+                    <option value="simple">Sencilla</option>
+                    <option value="review">Reseña</option>
+                </select>
+
+                <div id="common-fields">
+                    <label for="newItemText">Contenido:</label>
+                    <textarea id="newItemText" rows="4" placeholder="Escribe algo..."></textarea>
+
+                    <label for="newItemImagesUrl">Imagen:</label>
+                    <input type="file" id="newItemImagesUrl" accept="image/*">
+
+                    <label for="privacy">Privacidad:</label>
+                    <select id="privacy">
+                        <option value="public">Pública</option>
+                        <option value="private">Privada</option>
+                    </select>
+                </div>
+
+                <div id="review-fields" class="hidden">
+                    <label for="newItemTitle">Título:</label>
+                    <input type="text" id="newItemTitle" placeholder="Título de la reseña">
+
+                    <label for="newItemPlace">Lugar:</label>
+                    <input type="text" id="newItemPlace" placeholder="Lugar">
+
+                    <label for="newItemRating">Calificación:</label>
+                    <div id="star-rating">
+                      <input type="radio" id="star5" name="rating" value="5">
+                      <label for="star5" title="5 estrellas">&#9733;</label>
+                  
+                      <input type="radio" id="star4" name="rating" value="4">
+                      <label for="star4" title="4 estrellas">&#9733;</label>
+                  
+                      <input type="radio" id="star3" name="rating" value="3">
+                      <label for="star3" title="3 estrellas">&#9733;</label>
+                  
+                      <input type="radio" id="star2" name="rating" value="2">
+                      <label for="star2" title="2 estrellas">&#9733;</label>
+                  
+                      <input type="radio" id="star1" name="rating" value="1">
+                      <label for="star1" title="1 estrella">&#9733;</label>
+                  </div>
+                </div>
+
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+      </div>
+
+
+            <!--Aquí empiezan las publicaciones son 4 containers -->
+            
+            <div class="ticket-card"> 
+              <div id="carouselExampleSlidesOnly" class="carousel slide ticket-image" data-bs-ride="carousel"> 
+                <div class="carousel-inner"> 
+                  <div class="carousel-item active"> 
+                    <img src="../../assets/perfil/TrenBankok.jpg" class="d-block" alt="Bangkok"> 
+                  </div> 
+                  <div class="carousel-item"> 
+                    <img src="../../assets/perfil/tailandia2.jpg" class="d-block" alt="budistas"> 
+                  </div> 
+                  <div class="carousel-item"> 
+                    <img src="../../assets/perfil/tailandia3.jpg" class="d-block" alt="mercado"> 
+                  </div> 
+                </div> 
+              </div> 
+
+              <div class="ticket-content"> 
+                <h6>Tailandia</h6> 
+                <p>Tailandia es un destino cautivador que ofrece una rica mezcla de cultura, naturaleza y aventura. Tailandia tiene algo para todos.</p> 
+              </div> 
+            </div>
+            
+            <div class="ticket-card"> 
+              <div id="carouselExampleSlidesOnly" class="carousel slide ticket-image" data-bs-ride="carousel"> 
+                <div class="carousel-inner"> 
+                  <div class="carousel-item active"> 
+                    <img src="../../assets/perfil/Cascada.jpg" class="d-block" alt="El Salto"> 
+                  </div> 
+                  <div class="carousel-item"> 
+                    <img src="../../assets/perfil/Mexico1.jpg" class="d-block" alt="Chichen itzá"> 
+                  </div> 
+                  <div class="carousel-item"> 
+                    <img src="../../assets/perfil/Mexico2.jpg" class="d-block" alt="Tacos"> 
+                  </div> 
+                </div> 
+              </div> 
+              <div class="ticket-content"> 
+                <h6>México</h6> 
+                <p>México es una tierra de contrastes, donde las culturas antiguas y modernas conviven en un mosaico vibrante. Ven y descubre la magia de México, un destino que te encantará con su historia, naturaleza y cultura. </p> 
+              </div> 
+            </div>
+
+            <div class="ticket-single"> 
+              <div id="carouselExampleSlidesOnly" class="carousel slide single-image" data-bs-ride="carousel"> 
+                <div class="single-inner"> 
+                  <div class="single-item">
+                    <img src="../../assets/perfil/EliasPerf.jpg" class="d-block" alt="El Salto">
+                  </div>
+                </div> 
+              </div> 
+              <div class="single-content"> 
+                <h6>El mercado de San Juan</h6> 
+                <p>En mi visita a México, mi amigo Elias me invitó a comer a un mercado muy conocido en la ciudad de méxico. Para ser específicos comí en la pescadería Puerto de Alvarado,
+                  te recomiendo mucho comer ahi una tártara de atún fresco, una tostada de ceviche ó un buen aguachile de camarón son simplemente deliciosos! 
+                  Tienen un pequeño apartado con mesitas y ahi te sirven todas estas delicias! 
+                </p> 
+              </div> 
+            </div>
+
+            <div class="ticket-single"> 
+              <div id="carouselExampleSlidesOnly" class="carousel slide single-image" data-bs-ride="carousel"> 
+                <div class="single-inner"> 
+                  <div class="single-item">
+                    <img src="../../assets/perfil/EliasPerf.jpg" class="d-block" alt="El Salto">
+                  </div>
+                </div> 
+              </div> 
+              <div class="single-content"> 
+                <h6>El mercado de San Juan</h6> 
+                <p>En mi visita a México, mi amigo Elias me invitó a comer a un mercado muy conocido en la ciudad de méxico. Para ser específicos comí en la pescadería Puerto de Alvarado,
+                  Te recomiendo mucho comer ahi una tártara de atún fresco, una tostada de ceviche ó un buen aguachile de camarón son simplemente deliciosos! 
+                  Tienen un pequeño apartado con mesitas y ahi te sirven todas estas delicias! 
+                </p> 
+              </div> 
+            </div>
+          </div>
+          
+
+        
+
+         <!-- Aquí empieza la card sticky del usuario -->
+
+          <div class="col-md-4">
+            <div class="position-sticky" style="top: 3rem;">
+              <div class="p-4 mb-3 custom-bg rounded d-flex justify-content-center">
+                <div class="card" style="width: 20rem;">
+                  <img id="photo-user" src="../../assets/perfil/EliasPerf.jpg" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: justify;">
+                    <h5 class="card-title-profile" style="text-align: center;"> Jorge García </h5>
+                    <p class="card-text-profile ">Hola soy Jorge, actualmente me encuentro viajando al oeste de Asia. En mi perfil encontrarás consejos, guías y reseñas que podrían ser de utilidad en tu siguiente viaje.</p>
+                    <div class="button-container" >
+                      <button class="button">Configuración</button>
+                      <button class="button">Foto</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div>
+                <h4 class="fst-italic">Siempre en Tendencia</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img class="bd-placeholder-img" src="../../assets/perfil/Thai.jpg" alt="thai">
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Tailandia</h6>
+                        <small class="text-body-secondary">January 15, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img class="bd-placeholder-img" src="../../assets/perfil/JapanYe.jpg" alt="thai">
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Japón</h6>
+                        <small class="text-body-secondary">January 14, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                      <img class="bd-placeholder-img" src="../../assets/perfil/Taiwan6.jpg" alt="thai">
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">Taiwan</h6>
+                        <small class="text-body-secondary">January 13, 2024</small>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+      
+             
+          
+    
+    </main>
+
+    <footer>
+      <div class="copyright-container">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/017/784/920/small_2x/copyrights-icon-on-transparent-background-free-png.png" alt="copyright-logo">
+        <p id="copyright">Wanderlust 2024</p>
+      </div>
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
