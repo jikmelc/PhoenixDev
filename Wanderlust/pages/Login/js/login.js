@@ -1,3 +1,4 @@
+import { pController } from '../../Perfil/perfil-Js/viajero.js';
 import { hashPassword } from '../../registro/js/registroUsuario.js';
 
 export async function iniciarSesion(email, password) {
@@ -25,6 +26,7 @@ export async function iniciarSesion(email, password) {
                 console.log('Inicio de sesión exitoso');
                 // Redireccionar a la página principal o mostrar un mensaje de éxito
                 localStorage.setItem('correoSesionIniciada', email);
+                pController();
                 window.location.href = '/pages/feed/feed.html';
             } else {
                 alert('Correo electrónico o contraseña incorrectos');

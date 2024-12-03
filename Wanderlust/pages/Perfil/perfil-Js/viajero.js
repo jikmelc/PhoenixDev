@@ -62,4 +62,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inicializar el estado de los campos al cargar la página
     updateFields();
+
+
+//-----------------------------------Conexion con HTML y publicationController
+
+
+   
+    const publicationController= new PublicationController(0);
+   
+
+//Espera el submit para disparar la siguiente accion
+publicacion.addEventListener('submit',(event)=>{
+    
+    event.preventDefault();
+    const privacidad= document.getElementById('post-type').value;
+    if(privacidad=='simple')
+    {
+        publicationController.addPublicationSencilla();
+        limpiarFormulario();
+        hideModal();
+        
+        
+
+    }
+    else
+    {
+        publicationController.addPublicacionResena();
+        limpiarFormulario()
+        hideModal();
+    }
 });
+function limpiarFormulario() {
+    document.getElementById('newItemText').value = '';
+    document.getElementById('newItemImagesUrl').value = '';
+    
+   
+    document.getElementById('newItemTitle').value = '';
+    document.getElementById('newItemPlace').value = '';
+  }});
