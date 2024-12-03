@@ -34,8 +34,6 @@
                 titulo:titulo,
                 lugar:lugar
               };
-              
-              
               this.Publicaciones.push(publicacion);  
               const publicacionesJSON = JSON.stringify(this.Publicaciones);
             localStorage.setItem('publicaciones', publicacionesJSON);
@@ -83,7 +81,10 @@
         const imagen = document.getElementById('newItemImagesUrl').files[0];
         const privacidad = document.getElementById('privacy').value;
         const tipo = document.getElementById('post-type').value;
+        
+
         if (imagen) {
+          
           const reader = new FileReader();
           reader.onload = (event) => {
             const newItemImageUrl = event.target.result; 
@@ -97,7 +98,7 @@
               this.Publicaciones.push(publicacion);  
               const publicacionesJSON = JSON.stringify(this.Publicaciones);
             localStorage.setItem('publicaciones', publicacionesJSON);      
-      
+            
                   
           };
          reader.readAsDataURL(imagen); 

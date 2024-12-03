@@ -1,6 +1,5 @@
 
 // cambiar la imagen cada 2 segundos
-
 const autoImages = ["https://cdn.forbes.com.mx/2020/10/shutterstock_1206167314-res-640x360.jpg"];
         let autoIndex = 0;
 
@@ -41,12 +40,13 @@ const messageSearch = document.querySelector('#buscarmensaje');
     }
   
     const contenedorPublicaciones = document.getElementById('publicaciones');
-    let publicacionesHTML = '';
-  
+    
+    let itemHTML=''  ;
+    let publicacionesHTML='' ;
     // Itera sobre las publicaciones en orden inverso
     for (let i = publicacionesArray.length - 1; i >= 0; i--) {
       const publicacion = publicacionesArray[i];
-      let itemHTML = '';
+      
       
       if (publicacion.tipo === 'simple') {
         // ... (construye el HTML para la publicación simple) ...
@@ -65,6 +65,8 @@ const messageSearch = document.querySelector('#buscarmensaje');
           </div>
         `;
         publicacionesHTML += itemHTML;
+        
+        //contenedorPublicaciones.insertAdjacentHTML('beforeend', itemHTML);
       } else if (publicacion.tipo === 'review') {
         // ... (construye el HTML para la publicación tipo review) ...
         itemHTML = `
@@ -117,16 +119,25 @@ const messageSearch = document.querySelector('#buscarmensaje');
           </div>
           </div>
         `;
+
         publicacionesHTML += itemHTML;
+        
       }
-      // Agrega la publicación al contenedor usando insertAdjacentHTML
-      //contenedorPublicaciones.insertAdjacentHTML('afterbegin', itemHTML);
       
     }
     contenedorPublicaciones.innerHTML += publicacionesHTML;
-    
-    
+    //contenedorPublicaciones.append(publicacionesHTML)
   }
+  function limpiarFormulario() {
+    document.getElementById('newItemText').value = '';
+    document.getElementById('newItemImagesUrl').value = '';
+    document.getElementById('newItemTitle').value = '';
+    document.getElementById('newItemPlace').value = '';
+  }
+
+  //====================================================================================
+
+  
 
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
@@ -145,12 +156,10 @@ const searchMessage = () => {
 //boton publicaciones
 //messageSearch.addEventListener('keyup', searchMessage);
 
-
+const publicationController= new PublicationController(0);
 document.addEventListener("DOMContentLoaded", () => {
-  
-  
-  showPublicaciones();
-  
+   
+    showPublicaciones()
   // Obtener elementos
     const openFormBtn = document.getElementById("open-form-btn");
     const closeFormBtn = document.getElementById("close-form-btn");
@@ -214,7 +223,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inicializar el estado de los campos al cargar la página
     updateFields();
+
+
+    //=================================================
+    
+  
+  
+  publicaciones.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    
+    const privacidad= document.getElementById('post-type').value;
+    if(privacidad=='simple')
+    {
+        publicationController.addPublicationSencilla();       
+        
+    }
+    else
+    {
+        publicationController.addPublicacionResena();
+    }           
+        
+        limpiarFormulario()
+        hideModal()
+        
+
 });
+
+  //====================================================================================
+  //======================================fin publicaciones
+});//FinDOM
 
 //Likes de publicaciones
 const btnLike = document.querySelector('.like_icon');
@@ -266,3 +303,5 @@ saveActive.addEventListener('click', () => {
     saveActive.classList.remove('active');
     btnSave.setAttribute('style', 'display:inline-block');
 });
+
+//============================================================== publicar desde feed
