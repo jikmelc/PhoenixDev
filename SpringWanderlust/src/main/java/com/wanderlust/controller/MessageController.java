@@ -13,6 +13,6 @@ public class MessageController
     public Message send(Message message)
     {
 
-        return new Message( message.content());
+        return new Message(message.email(),  message.content());
     }
 }
