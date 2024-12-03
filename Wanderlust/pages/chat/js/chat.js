@@ -70,19 +70,29 @@ const mostrarMensaje = (message) => {
           `);
     }
     
-
+    desplazarAlFinal();
    // console.log(body.email);//Para validacion de tipo de bubble
 };
 
+
+
+function desplazarAlFinal() {const chatPanel = document.querySelector('.chat-panel');
+  chatPanel.scrollTop = chatPanel.scrollHeight;
+}
 document.addEventListener('DOMContentLoaded', () => {
+  desplazarAlFinal();
     
     const btnEnviar = document.getElementById('btnEnviar');
     btnEnviar.addEventListener('click', (e) => {
         e.preventDefault();
         enviarMensaje();
-        //console.log("click")
+        
+       
     });
-    conectarWS();
     
+    conectarWS();
+    desplazarAlFinal();
+    
+
 });
 

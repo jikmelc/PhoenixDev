@@ -20,6 +20,7 @@
         const titulo=document.getElementById('newItemTitle').value;
         const lugar=document.getElementById('newItemPlace').value;
         
+        
         if (imagen) {
           const reader = new FileReader();
           reader.onload = (event) => {
