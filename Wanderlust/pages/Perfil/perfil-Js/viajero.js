@@ -100,7 +100,7 @@ function limpiarFormulario() {
     document.getElementById('newItemTitle').value = '';
     document.getElementById('newItemPlace').value = '';
   }});
-});
+
 
 //Likes de publicaciones
 const btnLike = document.querySelector('.like_icon');

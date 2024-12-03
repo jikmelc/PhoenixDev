@@ -39,7 +39,7 @@
               this.Publicaciones.push(publicacion);  
               const publicacionesJSON = JSON.stringify(this.Publicaciones);
             localStorage.setItem('publicaciones', publicacionesJSON);
-            console.log('resena');
+            
           };
           reader.readAsDataURL(imagen); // Cambiado newItemImageFile a imagen
         } else {
@@ -96,7 +96,9 @@
               };
               this.Publicaciones.push(publicacion);  
               const publicacionesJSON = JSON.stringify(this.Publicaciones);
-            localStorage.setItem('publicaciones', publicacionesJSON);            
+            localStorage.setItem('publicaciones', publicacionesJSON);      
+      
+                  
           };
          reader.readAsDataURL(imagen); 
         } else {
