@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>Liked by <b>Axel Ortiz</b> and <b>2,345 others</b></p>
             </div>
             <div class="caption">
-              <p><b>${publicacion.titulo}</b> ${publicacion.contenido}</p>
+              <p><b>${nombreUsuario}</b> ${publicacion.contenido}</p>
             </div>
             <div class="comment text-muted">
               View all 323 comments
