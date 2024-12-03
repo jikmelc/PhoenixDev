@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = publicacionesArray.length - 1; i >= 0; i--) {
       const publicacion = publicacionesArray[i];
       let itemHTML = '';
-  
+      
       if (publicacion.tipo === 'simple') {
         // ... (construye el HTML para la publicación simple) ...
         itemHTML = `

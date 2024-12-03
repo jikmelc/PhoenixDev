@@ -34,6 +34,8 @@
                 titulo:titulo,
                 lugar:lugar
               };
+              
+              
               this.Publicaciones.push(publicacion);  
               const publicacionesJSON = JSON.stringify(this.Publicaciones);
             localStorage.setItem('publicaciones', publicacionesJSON);
@@ -73,10 +75,7 @@
           return true;
       }
       return false;
-    }
-   
-     
-        
+    }  
        
       addPublicationSencilla() 
       {
