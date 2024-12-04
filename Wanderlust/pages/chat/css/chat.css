@@ -16,11 +16,13 @@ body {
   padding: 0;
 }
 
+
 .container {
   margin:  auto;
   background-color: #f7eed9;
   padding: 5px;
   border-radius: 18px;
+  
 }
 
 h6{
@@ -107,7 +109,7 @@ p{
 
 /* Estilos para la lista de amigos */
 .friend-list {
-  overflow-y: auto;
+  
   max-height: 100vh;
 }
 
@@ -168,12 +170,21 @@ hr {
 .col-md-8 {
   padding-right: 15px;
 }
-
+.insertMessages
+{
+  
+  
+ 
+  
+}
 .chat-panel {
-  overflow-y: auto;
+   overflow-y: auto;
+   overflow-x: hidden;
   border-radius: 15px;
   padding: 10px 20px;
   background-color: white;
+  max-height: 550px;
+ 
 }
 
 .chat-bubble {
