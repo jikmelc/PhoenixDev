@@ -1,39 +1,42 @@
-import { hashPassword } from '../../registro/js/registroUsuario.js';
+const campoContraseña = document.getElementById("contraseña");
+const campoCorreo = document.getElementById("correoElectronico");
 
 export async function iniciarSesion(email, password) {
-    try {
-        // Obtener el array de usuarios del Local Storage
-        const usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-        if (usuarios) {
-            // Hashear la contraseña ingresada una sola vez
-            const hashedPassword = await hashPassword(password);
+    const url = `http://localhost:8080/api/v1/users/email/${email}`;
 
-            // Iterar sobre el array de usuarios
-            let usuarioEncontrado = null;
-            for (let i = 0; i < usuarios.length; i++) {
-                const usuario = usuarios[i];
-
-                // Comparar el correo electrónico y la contraseña hasheada
-                if (usuario.userEmail === email && usuario.contraseña === hashedPassword) {
-                    usuarioEncontrado = usuario;
-                    break; // Salir del bucle si se encuentra el usuario
-                }
-            }
-
-            if (usuarioEncontrado) {
-                console.log('Inicio de sesión exitoso');
-                // Redireccionar a la página principal o mostrar un mensaje de éxito
-                localStorage.setItem('correoSesionIniciada', email);
-                localStorage.setItem('nombreUsuario', usuarioEncontrado.nombres)
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if(data.contraseña == password) {
                 window.location.href = '/pages/feed/feed.html';
             } else {
-                alert('Correo electrónico o contraseña incorrectos');
+                limpiarAlertasExistentes();
+                mostrarAlertaDeError(campoContraseña,"Contraseña errónea.")
             }
-        } else {
-            alert('Usuario no encontrado');
-        }
-    } catch (error) {
-        alert('Error al iniciar sesión:', error);
-    }
+        })
+        .catch(error => {
+            limpiarAlertasExistentes();
+            mostrarAlertaDeError(campoCorreo, "El correo electrónico ingresado no tiene una cuenta asociada.")
+            console.error(error)
+        })
 }
+
+function mostrarAlertaDeError(campo, mensaje){
+    const alert = `
+    <div class="alert alert-danger mt-2" role="alert">
+        <p>${mensaje}</p>
+    </div>
+    `
+    campo.insertAdjacentHTML('beforeend', alert);
+}
+
+function limpiarAlertasExistentes(){
+    // Selecciona la alerta existente, si la hay
+    const existingDangerAlert = document.querySelector('.alert-danger'); 
+ 
+    // Si existe una alerta, elimínala
+    if (existingDangerAlert) {
+        existingDangerAlert.remove();
+     }
+ }

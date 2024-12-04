@@ -11,11 +11,26 @@
 
 
 /*Parte de arriba*/
+h1{
+    font-family: 'BespokeSans-ExtraboldItalic';
+}
+
+h2{
+    font-family: 'BespokeSans-BoldItalic';
+}
+
+h3{
+    font-family: 'BespokeSans-MediumItalic'; 
+}
+
 body{
     background-color: #f7eed9 !important;
 
 }
 
+p{
+    font-family: 'BespokeSans-Regular';
+}
 .contenty:hover{
     background-color: #b68c6e;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -65,6 +80,7 @@ body{
 
 
 .span-style{
+    font-family: 'BespokeSans-BoldItalic';
     font-weight: 700;
 }
 
@@ -94,9 +110,9 @@ body{
 }
 
 .link-customer{
+    font-family: 'BespokeSans-Regular';
     font-weight: 600;
     text-decoration: none;
-    
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
@@ -130,4 +146,8 @@ body{
 
 .transform-turn{
     transform: rotate(180deg);
+}
+
+.blockquote-footer{
+    font-family: 'BespokeSans-LightItalic';
 }
