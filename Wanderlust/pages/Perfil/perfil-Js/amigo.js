@@ -1,50 +1,57 @@
 
-const btnLike = document.querySelector('.like_icon');
-const likeActive = document.querySelector('.active_like');
-const animationHeart = document.querySelector('.heart_icon');
+const btnLike = document.querySelectorAll('.like_icon');
+const likeActive = document.querySelectorAll('.active_like');
+const animationHeart = document.querySelectorAll('.heart_icon');
+const imgPost = document.querySelectorAll('.img_post');
+const likes = document.querySelectorAll('.likes .number');
+const btnSave = document.querySelectorAll('.save_icon');
+const saveActive = document.querySelectorAll('.active_save');
 
-const imgPost = document.querySelector('.img_post');
+btnLike.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        likeActive[index].classList.add('active');
+        btn.setAttribute('style', 'display:none');
+        animationHeart[index].setAttribute('style', 'display:block');
+        let currentText = likes[index].innerText;
 
-const likes = document.querySelector('.likes .number');
+        let number = parseFloat(currentText);
+        number += 1;
 
-const btnSave = document.querySelector('.save_icon');
-const saveActive = document.querySelector('.active_save');
-
-btnLike.addEventListener('click', () => {
-    likeActive.classList.add('active');
-    btnLike.setAttribute('style', 'display:none');
-    animationHeart.setAttribute('style', 'display:block');
-    let currentText = likes.innerText;
-
-    let number = parseFloat(currentText);
-    number += 1;
-
-    likes.innerText = number;
+        likes[index].innerText = number;
+    });
 });
 
-likeActive.addEventListener('click', () => {
-    likeActive.classList.remove('active');
-    btnLike.setAttribute('style', 'display:inline-block');
+likeActive.forEach((like, index) => {
+    like.addEventListener('click', () => {
+        like.classList.remove('active');
+        btnLike[index].setAttribute('style', 'display:inline-block');
+    });
 });
 
-imgPost.addEventListener('dblclick', () => {
-    likeActive.classList.add('active');
-    btnLike.setAttribute('style', 'display:none');
-    animationHeart.setAttribute('style', 'display:block');
-    let currentText = likes.innerText;
+imgPost.forEach((img, index) => {
+    img.addEventListener('dblclick', () => {
+        likeActive[index].classList.add('active');
+        btnLike[index].setAttribute('style', 'display:none');
+        animationHeart[index].setAttribute('style', 'display:block');
+        let currentText = likes[index].innerText;
 
-    let number = parseFloat(currentText);
-    number += 1;
+        let number = parseFloat(currentText);
+        number += 1;
 
-    likes.innerText = number;
+        likes[index].innerText = number;
+    });
 });
 
-btnSave.addEventListener('click', () => {
-    saveActive.classList.add('active');
-    btnSave.setAttribute('style', 'display:none');
+btnSave.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        saveActive[index].classList.add('active');
+        btn.setAttribute('style', 'display:none');
+    });
 });
 
-saveActive.addEventListener('click', () => {
-    saveActive.classList.remove('active');
-    btnSave.setAttribute('style', 'display:inline-block');
+saveActive.forEach((save, index) => {
+    save.addEventListener('click', () => {
+        save.classList.remove('active');
+        btnSave[index].setAttribute('style', 'display:inline-block');
+    });
 });
