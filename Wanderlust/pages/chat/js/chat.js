@@ -25,25 +25,29 @@ const conectarWS = () => {
 };
 
 const enviarMensaje = () => {
-    
-    let txtMensaje = document.getElementById('txtMensaje');
-    const correoMensaje=localStorage.getItem('correoSesionIniciada');
-    //console.log(txtMensaje.value)
-    stompCliente.publish({
-        destination: '/app/send',
-        body: JSON.stringify({
-            email: correoMensaje,
-            content: txtMensaje.value
-        })
-    });
-    
+  const txtMensaje = document.getElementById('txtMensaje');
+
+  if (txtMensaje.value.trim() === '') {
+    return; 
+  }
+  const correoMensaje = localStorage.getItem('correoSesionIniciada');
+  stompCliente.publish({
+    destination: '/app/send',
+    body: JSON.stringify({
+      email: correoMensaje,
+      content: txtMensaje.value
+    })
+  });
+  const contenedorMensajes = document.getElementById('txtMensaje');
+  contenedorMensajes.value = '';
 };
 
 const mostrarMensaje = (message) => {
     const body = JSON.parse(message);
     const contenedorMensajes = document.getElementById('insertMessages');
-    const correoSesion=localStorage.getItem("correoSesionIniciada");
+    const correoSesion=localStorage.getItem('correoSesionIniciada');
     console.log(correoSesion);
+    console.log(body.email);
     
     if(body.email==correoSesion)
     {
@@ -69,16 +73,14 @@ const mostrarMensaje = (message) => {
             </div>
           `);
     }
-    
     desplazarAlFinal();
-   // console.log(body.email);//Para validacion de tipo de bubble
 };
-
-
 
 function desplazarAlFinal() {const chatPanel = document.querySelector('.chat-panel');
   chatPanel.scrollTop = chatPanel.scrollHeight;
 }
+
+
 document.addEventListener('DOMContentLoaded', () => {
   desplazarAlFinal();
     
@@ -89,6 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
        
     });
+
+    const txtMensaje1 = document.getElementById('txtMensaje');
+
+        txtMensaje1.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevenir el comportamiento por defecto del Enter
+      enviarMensaje();
+    }
+  });
     
     conectarWS();
     desplazarAlFinal();
