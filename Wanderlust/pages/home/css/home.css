@@ -31,13 +31,17 @@ body{
 p{
     font-family: 'BespokeSans-Regular';
 }
+
+
+.contenty{
+    transition: background 0.8s;
+}
 .contenty:hover{
     /* background-color: #b68c6e; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.5s;
-    transition: background-color 0.5s;
-    
+    background: linear-gradient(to right, #4a4a4a, #b68c6e, #c2b1a5, transparent);
 }
 
 
@@ -83,11 +87,10 @@ p{
 .span-style{
     font-family: 'BespokeSans-BoldItalic';
     font-weight: 700;
+    color: white;
 }
 
-.prominent-style{
-    color: black;
-}
+
 
 #atractive-style{
     line-height: 3.0;
@@ -149,6 +152,7 @@ p{
 .transform-turn{
     transform: rotate(180deg);
     width: 100%;
+    margin: 0%;
 }
 
 .blockquote-footer{
