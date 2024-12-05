@@ -241,10 +241,12 @@ document.addEventListener("DOMContentLoaded", () => {
     else
     {
         publicationController.addPublicacionResena();
+        
     }           
         
         limpiarFormulario()
         hideModal()
+        location.reload();
         
 
 });

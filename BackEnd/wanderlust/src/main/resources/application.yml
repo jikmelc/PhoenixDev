@@ -5,7 +5,7 @@ spring:
  datasource:
   url: jdbc:mysql://localhost:3306/wanderlust?createDatabaseIfNotExist=true
   username: root
-  password: mICqlpA$$w0rd
+  password: defelipe
 
  jpa:
   hibernate:
