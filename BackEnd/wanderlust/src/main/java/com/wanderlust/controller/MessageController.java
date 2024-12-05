@@ -11,6 +11,6 @@ public class MessageController
     @SendTo("/topic/messages")
     public Message send(Message message)
     {
-        return new Message( message.correo() ,message.content());
+        return new Message( message.email() ,message.content());
     }
 }
