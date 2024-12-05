@@ -33,15 +33,13 @@ p{
 }
 
 
-.contenty{
-    transition: background 0.8s;
-}
+
 .contenty:hover{
     /* background-color: #b68c6e; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.5s;
-    background: linear-gradient(to right, #4a4a4a, #b68c6e, #c2b1a5, transparent);
+    
 }
 
 
@@ -68,16 +66,22 @@ p{
 }
 
 .link-custom{
-    font-weight: 600;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-decoration: none;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .link-custom:hover{
-    color: #4a4a4a;
-    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    color: white;
+    letter-spacing: 1px;
+    background-color: #b68c6e;
+    border-radius: 15px;
+    padding: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 .description-container{
     color: white;
@@ -100,6 +104,18 @@ p{
     margin-top: 200px;
     width: 100%;
 }
+
+.btn-custom{
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 25%;
+    padding: 15px;
+    background-color: #b68c6e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 
 /* contenido*/
