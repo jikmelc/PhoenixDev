@@ -165,6 +165,10 @@ h3{
     color: #000;
 }
 
+.star{
+    width: 10%;
+}
+
 .time {
     font-size: 12px;
     color: #919191;
