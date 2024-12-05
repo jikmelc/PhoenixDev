@@ -46,6 +46,7 @@ export async function registrarUsuario(userData) {
             const responseData = await response.json();
             console.log('Usuario registrado en backend:', responseData);
             alert('Usuario registrado con éxito.');
+            localStorage.setItem('correoSesionIniciada', correo)
             // Redirigir después del registro exitoso
             window.location.href = '/pages/feed/feed.html';
         } else {
