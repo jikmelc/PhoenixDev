@@ -1,7 +1,6 @@
 package com.wanderlust.model;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -38,8 +37,8 @@ public class PostEntity {
 	private String text;
 		
 	@Lob
-	@Column(name = "image", columnDefinition="BLOB")
-	private byte[] image;
+	@Column(name = "image", columnDefinition="LONGTEXT")
+	private String image;
 
 	//----------------------------------------------------------- 
 	// Relación posts - users
@@ -54,7 +53,7 @@ public class PostEntity {
 		
 	}
 	
-	public PostEntity(Long idPost, Privacy privacy, LocalDateTime date, String text, byte[] image, UserEntity user) {
+	public PostEntity(Long idPost, Privacy privacy, LocalDateTime date, String text, String image, UserEntity user) {
 		this.idPost = idPost;
 		this.privacy = privacy;
 		this.date = date;
@@ -96,11 +95,11 @@ public class PostEntity {
 		this.text = text;
 	}
 
-	public byte[] getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(byte[] image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
@@ -115,16 +114,12 @@ public class PostEntity {
 	@Override
 	public String toString() {
 		return "PostEntity [idPost=" + idPost + ", privacy=" + privacy + ", date=" + date + ", text=" + text
-				+ ", image=" + Arrays.toString(image) + ", user=" + user + "]";
+				+ ", image=" + image + ", user=" + user + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(image);
-		result = prime * result + Objects.hash(date, idPost, privacy, text, user);
-		return result;
+		return Objects.hash(date, idPost, image, privacy, text, user);
 	}
 
 	@Override
@@ -137,9 +132,11 @@ public class PostEntity {
 			return false;
 		PostEntity other = (PostEntity) obj;
 		return Objects.equals(date, other.date) && Objects.equals(idPost, other.idPost)
-				&& Arrays.equals(image, other.image) && privacy == other.privacy && Objects.equals(text, other.text)
+				&& Objects.equals(image, other.image) && privacy == other.privacy && Objects.equals(text, other.text)
 				&& Objects.equals(user, other.user);
 	}
+
+
 
 	public enum Privacy {
 		Public, 

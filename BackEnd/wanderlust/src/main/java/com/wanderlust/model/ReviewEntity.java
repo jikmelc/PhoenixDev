@@ -1,7 +1,6 @@
 package com.wanderlust.model;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -39,8 +38,8 @@ public class ReviewEntity {
 	private String text;
 	
 	@Lob
-	@Column(name = "image", columnDefinition="BLOB", nullable = false)
-	private byte[] image;
+	@Column(name = "image", columnDefinition="LONGTEXT", nullable = false)
+	private String image;
 	
 	@Column(name = "title", length = 128, nullable = false, unique = false)
 	private String title;
@@ -64,7 +63,7 @@ public class ReviewEntity {
 		
 	}
 
-	public ReviewEntity(Long idReview, LocalDateTime date, Privacy privacy, String text, byte[] image, String title,
+	public ReviewEntity(Long idReview, LocalDateTime date, Privacy privacy, String text, String image, String title,
 			String place, Integer stars, UserEntity userReview) {
 		this.idReview = idReview;
 		this.date = date;
@@ -109,11 +108,11 @@ public class ReviewEntity {
 		this.text = text;
 	}
 
-	public byte[] getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(byte[] image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
@@ -152,17 +151,13 @@ public class ReviewEntity {
 	@Override
 	public String toString() {
 		return "ReviewEntity [idReview=" + idReview + ", date=" + date + ", privacy=" + privacy + ", text=" + text
-				+ ", image=" + Arrays.toString(image) + ", title=" + title + ", place=" + place + ", stars=" + stars
-				+ ", userReview=" + userReview + "]";
+				+ ", image=" + image + ", title=" + title + ", place=" + place + ", stars=" + stars + ", userReview="
+				+ userReview + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(image);
-		result = prime * result + Objects.hash(date, idReview, place, privacy, stars, text, title, userReview);
-		return result;
+		return Objects.hash(date, idReview, image, place, privacy, stars, text, title, userReview);
 	}
 
 	@Override
@@ -175,7 +170,7 @@ public class ReviewEntity {
 			return false;
 		ReviewEntity other = (ReviewEntity) obj;
 		return Objects.equals(date, other.date) && Objects.equals(idReview, other.idReview)
-				&& Arrays.equals(image, other.image) && Objects.equals(place, other.place) && privacy == other.privacy
+				&& Objects.equals(image, other.image) && Objects.equals(place, other.place) && privacy == other.privacy
 				&& Objects.equals(stars, other.stars) && Objects.equals(text, other.text)
 				&& Objects.equals(title, other.title) && Objects.equals(userReview, other.userReview);
 	}

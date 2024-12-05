@@ -1,6 +1,5 @@
 package com.wanderlust.service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,6 @@ import com.wanderlust.model.UserEntity;
 import com.wanderlust.repository.PostRepository;
 import com.wanderlust.repository.UserRepository;
 import com.wanderlust.service.dto.PostDto;
-
-import jakarta.transaction.Transactional;
 
 
 @Service

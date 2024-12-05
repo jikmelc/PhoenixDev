@@ -9,7 +9,7 @@ public class PostDto {
 	private LocalDateTime date;
 	private Privacy privacy;
 	private String text;
-	private byte[] image;
+	private String image;
 	private Long idUsuario;
 	
 	public LocalDateTime getDate() {
@@ -30,10 +30,10 @@ public class PostDto {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public byte[] getImage() {
+	public String getImage() {
 		return image;
 	}
-	public void setImage(byte[] image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 	public Long getIdUsuario() {
