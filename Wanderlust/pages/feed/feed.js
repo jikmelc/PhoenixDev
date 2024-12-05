@@ -75,7 +75,7 @@ const messageSearch = document.querySelector('#buscarmensaje');
                 <img src="../../assets/perfil/JohannesProf.jpg" alt="" class="profile">
                 <div class="userandtime">
                     <p class="profile_name">${publicacion.titulo}</p>
-                    <p class="calificacion">${nombreUsuario}</p>
+                    <p class="calificacion">5</p>
                     <p class="privacidad" >Pública</p>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
