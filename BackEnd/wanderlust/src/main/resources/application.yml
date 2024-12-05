@@ -1,0 +1,12 @@
+spring:
+ application:
+  name: wanderlust
+
+ datasource:
+  url: jdbc:mysql://localhost:3306/wanderlust?createDatabaseIfNotExist=true
+  username: root
+  password: defelipe
+
+ jpa:
+  hibernate:
+   ddl-auto: update

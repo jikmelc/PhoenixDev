@@ -3,6 +3,7 @@ import { registrarUsuario } from './registroUsuario.js';
 const form = document.querySelector('form');
 const campoDeNombre = document.getElementById('campoDeNombres');
 const campoDeApellido = document.getElementById('campoDeApellidos');
+const campoDeUsername = document.getElementById('campoDeUsername')
 const campoDeEmail = document.getElementById('campoDeEmail');
 const campoDeTelefono = document.getElementById('campoDeTelefono');
 const campoDeContraseña = document.getElementById('campoDeContraseña');
@@ -25,6 +26,8 @@ form.addEventListener('submit', async (event) => {
         mostrarAlertaDeError(campoDeNombre, 'El campo de nombre no debe contener números y no puede estar vacío.');
     } else if (!validateApellido(dataUser)) {
         mostrarAlertaDeError(campoDeApellido, 'El campo de apellido no debe contener números y no puede estar vacío.');
+    } else if(!validateUsername(dataUser)) {
+        mostrarAlertaDeError(campoDeUsername, 'Este campo no puede estar vacío.')
     } else if (!campoDeMes.value || !campoDeDia.value || !campoDeAno.value) {
         mostrarAlertaDeError(campoDeFechaDeNacimiento, 'Por favor, selecciona una fecha de nacimiento válida.');
     }else if (!generoInput.value) {
@@ -151,6 +154,12 @@ function validateApellido(userData){
     const apellidoRegex = /^(?!\s*$)[A-Za-zÀ-ÿ\s'-]{1,50}$/;
     const isValidApellidoPaterno = apellidoRegex.test(userData.apellidos);
     return isValidApellidoPaterno;
+}
+
+function validateUsername(userData) {
+    const username = userData.username.trim(); // Elimina espacios al principio y al final
+    const isValidUsername = username.length > 0; // Verifica que no esté vacío
+    return isValidUsername;
 }
 
  function validateUserEmail(userData){

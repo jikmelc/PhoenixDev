@@ -84,15 +84,59 @@ input, label{
     color: black;
 }
 
-button {
+.btn-iniciar {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
+    background-color: white;
+    border: 3px solid #c2b1a5;
+    color: black;
+    transition: background-color 0.4s;
+    
 }
+
+.btn-iniciar:hover {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: medium;
+    font-style: normal;
+    background-color: #4a4a4a;
+    border: 3px solid white;
+    color: white;
+    
+}
+
+.btn-crear {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    transition: background-color 0.4s;
+}
+
+
+.btn-crear:hover {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    background-color: #d5a86d;
+    color: black;
+    
+}
+
+#contraseña {
+    display: flex;
+    flex-direction: column;
+}
+
+#correoElectronico {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Tablet (810px y menor) */
 @media screen and (max-width: 810px) {

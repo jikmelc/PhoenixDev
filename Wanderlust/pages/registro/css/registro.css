@@ -1,4 +1,5 @@
 @import url('../../../components/footerLogIn/footer.css');
+@import url('../../Perfil/perfil-CSS/bespoke-sans.css');
 
 @font-face {
     font-family: bespoke-sans-bold;
@@ -8,6 +9,13 @@
 @font-face {
     font-family: bespoke-sans;
     src: url(../../../assets/BespokeSans_Complete/Fonts/OTFBespokeSans-Regular.otf);
+}
+
+h2{
+    font-family: 'BespokeSans-MediumItalic' !important;
+    font-size: 5rem;
+    text-align: left;
+    color: black;
 }
 
 body {
@@ -47,15 +55,31 @@ main {
 }
 
 #register {
-    background-color: black;
+    background-color: #4a4a4a;
     color: white;
-    width: 200px;
+    width: 190px;
+    transition: background-color 0.6s;
+    font-weight: bold;
+}
+
+#register:hover{
+    background-color: #c2b1a5;
+    color:white
+    
 }
 
 #cuenta {
-    background-color: black;
+    border: 4px solid #b68c6e;
+    background-color: white;
+    color: black;
+    width: 190px;
+    transition: background-color 0.6s;
+    
+}
+
+#cuenta:hover{
+    background-color: #b68c6e;
     color: white;
-    width: 200px;
 }
 
 #division_boton {
@@ -89,7 +113,7 @@ h2 {
 p, input, label{
     font-family: "Manrope";
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: black;
 }

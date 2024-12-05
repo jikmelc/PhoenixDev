@@ -23,7 +23,7 @@
 */
 @font-face {
   font-family: 'BespokeSans-Light';
-  src: url('../fonts/BespokeSans-Light.woff2') format('woff2'),
+  src: url('../../../assets/perfil/fonts/Bespoke-sans/BespokeSans-Light.woff2') format('woff2'),
        url('../fonts/BespokeSans-Light.woff') format('woff'),
        url('../fonts/BespokeSans-Light.ttf') format('truetype');
   font-weight: 300;
@@ -41,7 +41,7 @@
 }
 @font-face {
   font-family: 'BespokeSans-Regular';
-  src: url('../fonts/BespokeSans-Regular.woff2') format('woff2'),
+  src: url('../../../assets/perfil/fonts/Bespoke-sans/BespokeSans-Regular.woff2') format('woff2'),
        url('../fonts/BespokeSans-Regular.woff') format('woff'),
        url('../fonts/BespokeSans-Regular.ttf') format('truetype');
   font-weight: 400;
