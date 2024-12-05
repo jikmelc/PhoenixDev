@@ -9,7 +9,11 @@ export async function iniciarSesion(email, password) {
         .then(response => response.json())
         .then(data => {
             if(data.contraseña == password) {
+                localStorage.setItem('correoSesionIniciada',email)
+                console.log(email +"hola");
+                
                 window.location.href = '/pages/feed/feed.html';
+                
             } else {
                 limpiarAlertasExistentes();
                 mostrarAlertaDeError(campoContraseña,"Contraseña errónea.")
