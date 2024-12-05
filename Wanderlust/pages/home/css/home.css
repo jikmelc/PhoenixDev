@@ -174,3 +174,8 @@ p{
 .blockquote-footer{
     font-family: 'BespokeSans-LightItalic';
 }
+
+#botonCta:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Opcional, agrega un efecto de elevación */
+}
